@@ -10,11 +10,11 @@
     content="width=device-width, initial-scale=1"
   />
 
-  <title>Garbage Can & Dumpster Quote | Freshline Exterior Cleaning</title>
+  <title>Garbage Can & Dumpster Cleaning | Freshline Exterior Cleaning</title>
 
   <meta
     name="description"
-    content="Request garbage can cleaning, dumpster cleaning, or dumpster pad cleaning service from Freshline Exterior Cleaning in East Idaho."
+    content="Request residential garbage can cleaning, dumpster cleaning, or dumpster pad cleaning from Freshline Exterior Cleaning in Rigby, Idaho Falls, Rexburg, and surrounding East Idaho."
   />
 
   <style>
@@ -32,6 +32,7 @@
       font-family: Arial, Helvetica, sans-serif;
       background: #f4f7f2;
       color: #111;
+      line-height: 1.5;
     }
 
     a {
@@ -40,8 +41,12 @@
     }
 
     .container {
-      width: min(1100px, calc(100% - 34px));
+      width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
+    }
+
+    .green {
+      color: #67c52f;
     }
 
 
@@ -53,7 +58,7 @@
     }
 
     nav {
-      min-height: 86px;
+      min-height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -70,7 +75,7 @@
     }
 
     .logo-main {
-      font-size: 30px;
+      font-size: 29px;
       letter-spacing: -1px;
     }
 
@@ -80,135 +85,185 @@
 
     .logo-sub {
       margin-top: 7px;
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 2px;
     }
 
     .back-button {
-      padding: 12px 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
       border: 2px solid #67c52f;
-      color: #67c52f;
       border-radius: 6px;
-      font-size: 12px;
+      color: #67c52f;
+      font-size: 11px;
       font-weight: 900;
       text-transform: uppercase;
       transition: .18s ease;
     }
 
     .back-button:hover {
-      background: #67c52f;
       color: white;
+      background: #67c52f;
     }
 
 
-    /* PAGE */
+    /* MAIN PAGE */
 
-    .quote-section {
-      min-height: calc(100vh - 86px);
-      padding: 65px 0;
-
+    .page {
+      padding: 56px 0 70px;
       background:
         linear-gradient(
           90deg,
-          rgba(0,0,0,.90),
-          rgba(0,0,0,.65)
+          rgba(0,0,0,.91),
+          rgba(0,0,0,.72)
         ),
         url("https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=1800&q=90")
-        center/cover no-repeat;
+        center / cover no-repeat fixed;
     }
 
-    .quote-layout {
+    .page-grid {
       display: grid;
-      grid-template-columns: 1fr 500px;
-      gap: 65px;
+      grid-template-columns: minmax(0, 1fr) 510px;
+      gap: 60px;
       align-items: start;
     }
 
 
-    /* LEFT */
+    /* LEFT INFO */
 
-    .quote-copy {
-      color: white;
+    .intro {
       position: sticky;
-      top: 35px;
+      top: 30px;
+      color: white;
     }
 
-    .quote-copy h1 {
+    .intro h1 {
       margin: 0;
-      font-size: clamp(52px, 7vw, 82px);
+      max-width: 650px;
+      font-size: clamp(48px, 7vw, 78px);
       line-height: .92;
-      text-transform: uppercase;
       letter-spacing: -3px;
+      text-transform: uppercase;
+      font-weight: 1000;
     }
 
-    .quote-copy h1 span {
+    .intro h1 span {
       color: #67c52f;
     }
 
-    .quote-copy p {
-      max-width: 540px;
+    .intro > p {
+      max-width: 560px;
       margin: 22px 0;
+      color: rgba(255,255,255,.89);
       font-size: 18px;
-      color: rgba(255,255,255,.9);
     }
 
-    .quote-feature {
-      margin: 13px 0;
+    .feature-list {
+      margin-top: 28px;
+      display: grid;
+      gap: 13px;
+    }
+
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
       font-size: 14px;
       font-weight: 700;
     }
 
-    .quote-feature span {
+    .feature-icon {
       color: #67c52f;
-      margin-right: 8px;
+      font-weight: 900;
     }
 
-    .price-box {
-      margin-top: 28px;
-      padding: 20px;
-      max-width: 520px;
+
+    /* PRICE CARD */
+
+    .pricing-card {
+      max-width: 530px;
+      margin-top: 30px;
+      padding: 23px;
+      border-radius: 9px;
       border-left: 5px solid #67c52f;
-      border-radius: 6px;
-      background: rgba(0,0,0,.48);
+      background: rgba(0,0,0,.52);
+      backdrop-filter: blur(3px);
     }
 
-    .price-box strong {
-      color: #67c52f;
-      font-size: 30px;
-    }
-
-    .price-box p {
-      margin: 6px 0 0;
+    .pricing-card h3 {
+      margin: 0 0 13px;
       font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+    }
+
+    .pricing-main {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .pricing-main strong {
+      color: #67c52f;
+      font-size: 38px;
+    }
+
+    .pricing-main span {
+      font-weight: 700;
+    }
+
+    .pricing-secondary {
+      margin-top: 4px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .pricing-secondary strong {
+      color: #67c52f;
+      font-size: 22px;
+    }
+
+    .pricing-card p {
+      margin: 13px 0 0;
+      color: rgba(255,255,255,.72);
+      font-size: 11px;
+      line-height: 1.5;
     }
 
 
     /* FORM CARD */
 
-    .quote-card {
+    .form-card {
+      padding: 30px;
       background: white;
-      border-radius: 10px;
-      padding: 32px;
-      box-shadow: 0 20px 60px rgba(0,0,0,.30);
+      border-radius: 12px;
+      box-shadow: 0 24px 60px rgba(0,0,0,.28);
     }
 
-    .quote-card h2 {
-      margin: 0;
+    .form-heading {
+      margin-bottom: 25px;
       text-align: center;
-      font-size: 31px;
-      text-transform: uppercase;
-      line-height: 1;
     }
 
-    .quote-card h2 span {
+    .form-heading h2 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .form-heading h2 span {
       color: #67c52f;
     }
 
-    .quote-card > p {
-      text-align: center;
+    .form-heading p {
+      margin: 9px 0 0;
       color: #666;
-      font-size: 13px;
-      margin: 10px 0 24px;
+      font-size: 12px;
     }
 
 
@@ -216,7 +271,7 @@
 
     label {
       display: block;
-      margin: 13px 0 6px;
+      margin: 14px 0 6px;
       font-size: 11px;
       font-weight: 900;
       text-transform: uppercase;
@@ -226,32 +281,43 @@
     select,
     textarea {
       width: 100%;
-      border: 1px solid #ccc;
-      border-radius: 5px;
       padding: 13px;
-      font: inherit;
+      border: 1px solid #ccc;
+      border-radius: 6px;
       background: white;
+      color: #111;
+      font: inherit;
     }
 
     input:focus,
     select:focus,
     textarea:focus {
-      outline: 2px solid rgba(103,197,47,.25);
+      outline: 2px solid rgba(103,197,47,.18);
       border-color: #67c52f;
     }
 
     textarea {
-      min-height: 105px;
+      min-height: 100px;
       resize: vertical;
     }
 
-
-    /* SERVICE CHOICES */
-
-    .service-choice {
+    .two-column {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      gap: 12px;
+    }
+
+
+    /* SERVICE SELECTOR */
+
+    .service-title {
+      margin-top: 22px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
       margin-top: 8px;
     }
 
@@ -266,29 +332,40 @@
     }
 
     .service-option label {
+      height: 100%;
+      min-height: 108px;
       margin: 0;
-      min-height: 105px;
-      padding: 14px 10px;
+      padding: 15px 11px;
       border: 2px solid #ddd;
-      border-radius: 7px;
+      border-radius: 8px;
+      background: white;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
       cursor: pointer;
+      text-align: center;
       transition: .18s ease;
     }
 
-    .service-option label strong {
-      font-size: 12px;
+    .service-option label:hover {
+      border-color: #a8d88b;
+    }
+
+    .service-emoji {
+      margin-bottom: 7px;
+      font-size: 25px;
+    }
+
+    .service-option strong {
+      font-size: 11px;
       text-transform: uppercase;
     }
 
-    .service-option label span {
-      margin-top: 6px;
-      color: #666;
-      font-size: 10px;
+    .service-option span {
+      margin-top: 5px;
+      color: #6b6b6b;
+      font-size: 9px;
       line-height: 1.4;
       font-weight: 400;
       text-transform: none;
@@ -301,97 +378,104 @@
     }
 
 
-    /* CONDITIONAL */
+    /* DYNAMIC SECTIONS */
 
-    .service-section {
+    .dynamic-section {
       display: none;
       margin-top: 18px;
       padding: 18px;
-      border: 1px solid #dbe6d5;
-      border-radius: 7px;
+      border: 1px solid #dce8d6;
+      border-radius: 8px;
       background: #f8fbf6;
     }
 
-    .service-section.active {
+    .dynamic-section.active {
       display: block;
     }
 
-    .service-section h3 {
-      margin: 0 0 8px;
-      font-size: 14px;
+    .dynamic-section h3 {
+      margin: 0;
+      font-size: 15px;
       text-transform: uppercase;
     }
 
-    .service-section > p {
-      margin: 0 0 15px;
-      color: #555;
-      font-size: 11px;
+    .dynamic-section > p {
+      margin: 5px 0 13px;
+      color: #666;
+      font-size: 10px;
       line-height: 1.5;
     }
 
 
     /* PRICE CALCULATOR */
 
-    .price-result {
-      margin-top: 14px;
-      padding: 15px;
-      border-radius: 6px;
-      background: #edf7e7;
+    .calculator {
+      margin-top: 15px;
+      padding: 18px;
+      border-radius: 8px;
+      background: #111;
+      color: white;
       text-align: center;
     }
 
-    .price-result span {
-      display: block;
-      color: #555;
-      font-size: 11px;
-      font-weight: 700;
+    .calculator-label {
+      color: #ccc;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .5px;
       text-transform: uppercase;
     }
 
-    .price-result strong {
-      display: block;
-      margin-top: 3px;
+    .calculator-price {
+      margin-top: 2px;
       color: #67c52f;
-      font-size: 34px;
+      font-size: 40px;
+      line-height: 1;
+      font-weight: 1000;
     }
 
-    .price-breakdown {
-      margin-top: 4px;
-      color: #555;
+    .calculator-breakdown {
+      margin-top: 7px;
+      color: #bbb;
       font-size: 10px;
     }
 
 
-    /* GRID */
+    /* COMMERCIAL INFO */
 
-    .two-column {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
+    .custom-note {
+      margin-top: 14px;
+      padding: 12px;
+      border-left: 4px solid #67c52f;
+      border-radius: 5px;
+      background: #edf7e7;
+      color: #425c34;
+      font-size: 10px;
+      line-height: 1.5;
     }
 
 
-    /* UPLOAD */
+    /* PHOTOS */
 
-    .upload-section {
-      margin-top: 18px;
+    .photo-area {
+      margin-top: 20px;
     }
 
     .upload-box {
-      padding: 20px;
+      padding: 19px;
       border: 2px dashed #aaa;
-      border-radius: 7px;
+      border-radius: 8px;
       background: #fafafa;
       text-align: center;
     }
 
     .upload-icon {
-      font-size: 32px;
+      font-size: 29px;
     }
 
     .upload-title {
-      margin: 6px 0 10px;
-      font-size: 13px;
+      margin: 5px 0 9px;
+      font-size: 12px;
       font-weight: 900;
     }
 
@@ -402,23 +486,9 @@
     }
 
     .upload-help {
-      margin: 10px 0 0;
+      margin: 9px 0 0;
       color: #777;
-      font-size: 10px;
-      line-height: 1.5;
-    }
-
-
-    /* INFO */
-
-    .custom-quote-note {
-      margin-top: 14px;
-      padding: 12px;
-      border-left: 4px solid #67c52f;
-      background: #edf7e7;
-      border-radius: 5px;
-      color: #476238;
-      font-size: 10px;
+      font-size: 9px;
       line-height: 1.5;
     }
 
@@ -426,18 +496,15 @@
     /* SUBMIT */
 
     .submit-button {
-      display: flex;
       width: 100%;
-      margin-top: 18px;
       min-height: 54px;
-      align-items: center;
-      justify-content: center;
+      margin-top: 20px;
       border: 0;
-      border-radius: 6px;
+      border-radius: 7px;
       background: #67c52f;
       color: white;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 900;
       text-transform: uppercase;
       transition: .18s ease;
@@ -449,52 +516,60 @@
     }
 
 
-    /* CONTACT */
+    /* PRIVACY */
 
     .privacy {
       margin-top: 12px;
       color: #777;
-      font-size: 10px;
+      font-size: 9px;
+      line-height: 1.4;
       text-align: center;
     }
 
     .direct-contact {
-      margin-top: 25px;
-      padding-top: 20px;
+      margin-top: 22px;
+      padding-top: 18px;
       border-top: 1px solid #ddd;
-      text-align: center;
-      font-size: 12px;
       color: #555;
+      font-size: 11px;
+      text-align: center;
     }
 
     .direct-contact a {
-      color: #4a9f1d;
+      color: #4d9f21;
       font-weight: 900;
     }
 
 
     /* TABLET */
 
-    @media (max-width: 850px) {
+    @media (max-width: 880px) {
 
-      .quote-layout {
+      .page-grid {
         grid-template-columns: 1fr;
       }
 
-      .quote-copy {
+      .intro {
         position: static;
         text-align: center;
       }
 
-      .quote-copy p,
-      .price-box {
+      .intro > p,
+      .pricing-card {
         margin-left: auto;
         margin-right: auto;
       }
 
-      .quote-card {
-        max-width: 580px;
+      .feature-list {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+      }
+
+      .form-card {
         width: 100%;
+        max-width: 600px;
         margin: 0 auto;
       }
 
@@ -506,11 +581,11 @@
     @media (max-width: 600px) {
 
       nav {
-        min-height: 74px;
+        min-height: 72px;
       }
 
       .logo-main {
-        font-size: 23px;
+        font-size: 22px;
       }
 
       .logo-sub {
@@ -518,26 +593,40 @@
       }
 
       .back-button {
-        font-size: 10px;
-        padding: 10px 12px;
+        min-height: 38px;
+        padding: 0 11px;
+        font-size: 9px;
       }
 
-      .quote-section {
-        padding: 45px 0;
+      .page {
+        padding: 42px 0 55px;
+        background-attachment: scroll;
       }
 
-      .quote-copy h1 {
-        font-size: 49px;
+      .intro h1 {
+        font-size: 48px;
         letter-spacing: -2px;
       }
 
-      .quote-card {
-        padding: 24px 19px;
+      .intro > p {
+        font-size: 15px;
       }
 
-      .service-choice,
+      .pricing-card {
+        text-align: left;
+      }
+
+      .form-card {
+        padding: 23px 18px;
+      }
+
+      .service-grid,
       .two-column {
         grid-template-columns: 1fr;
+      }
+
+      .service-option label {
+        min-height: 92px;
       }
 
     }
@@ -560,7 +649,6 @@
         class="logo"
         href="index.html"
       >
-
         <div class="logo-main">
           Fresh<span>line</span>
         </div>
@@ -568,7 +656,6 @@
         <div class="logo-sub">
           Exterior Cleaning
         </div>
-
       </a>
 
 
@@ -590,14 +677,14 @@
 <main>
 
 
-<section class="quote-section">
+<section class="page">
 
-  <div class="container quote-layout">
+  <div class="container page-grid">
 
 
-    <!-- LEFT -->
+    <!-- LEFT SIDE -->
 
-    <div class="quote-copy">
+    <div class="intro">
 
       <h1>
         Cleaner Cans.<br>
@@ -605,56 +692,67 @@
       </h1>
 
       <p>
-        Residential garbage can cleaning plus commercial dumpster
-        and dumpster pad cleaning throughout East Idaho.
+        Residential garbage can cleaning plus commercial
+        dumpster and dumpster pad cleaning throughout East Idaho.
       </p>
 
 
-      <div class="quote-feature">
-        <span>✓</span>
-        Residential garbage cans
+      <div class="feature-list">
+
+        <div class="feature">
+          <span class="feature-icon">✓</span>
+          Residential garbage can cleaning
+        </div>
+
+        <div class="feature">
+          <span class="feature-icon">✓</span>
+          Commercial dumpster cleaning
+        </div>
+
+        <div class="feature">
+          <span class="feature-icon">✓</span>
+          Dumpster pad cleaning
+        </div>
+
+        <div class="feature">
+          <span class="feature-icon">✓</span>
+          One-time and recurring service options
+        </div>
+
+        <div class="feature">
+          <span class="feature-icon">✓</span>
+          Free commercial quotes
+        </div>
+
       </div>
 
-      <div class="quote-feature">
-        <span>✓</span>
-        Commercial dumpsters
-      </div>
 
-      <div class="quote-feature">
-        <span>✓</span>
-        Dumpster pad cleaning
-      </div>
+      <div class="pricing-card">
 
-      <div class="quote-feature">
-        <span>✓</span>
-        One-time & recurring service
-      </div>
+        <h3>
+          Residential Can Pricing
+        </h3>
 
-      <div class="quote-feature">
-        <span>✓</span>
-        Free custom commercial quotes
-      </div>
+        <div class="pricing-main">
 
+          <strong>$35</strong>
 
-      <div class="price-box">
+          <span>
+            first can
+          </span>
 
-        <strong>
-          $35
-        </strong>
+        </div>
 
-        first residential can
+        <div class="pricing-secondary">
 
-        <br>
+          <strong>+$20</strong>
+          each additional can
 
-        <strong>
-          +$20
-        </strong>
-
-        each additional can
+        </div>
 
         <p>
-          Dumpster and dumpster pad pricing is based on
-          size, quantity, condition, and service frequency.
+          Dumpster and dumpster pad services are custom quoted
+          based on size, quantity, condition, buildup, and service frequency.
         </p>
 
       </div>
@@ -665,15 +763,19 @@
 
     <!-- FORM -->
 
-    <div class="quote-card">
+    <div class="form-card">
 
-      <h2>
-        Request <span>Service</span>
-      </h2>
+      <div class="form-heading">
 
-      <p>
-        Choose your service and send us the details below.
-      </p>
+        <h2>
+          Request <span>Service</span>
+        </h2>
+
+        <p>
+          Choose what you need cleaned and we'll take it from there.
+        </p>
+
+      </div>
 
 
       <form
@@ -690,7 +792,7 @@
         />
 
 
-        <!-- NAME -->
+        <!-- CUSTOMER INFO -->
 
         <label for="name">
           Full Name
@@ -706,38 +808,44 @@
         />
 
 
-        <!-- PHONE -->
+        <div class="two-column">
 
-        <label for="phone">
-          Phone Number
-        </label>
+          <div>
 
-        <input
-          id="phone"
-          name="Phone"
-          type="tel"
-          placeholder="(208) 555-1234"
-          autocomplete="tel"
-          required
-        />
+            <label for="phone">
+              Phone Number
+            </label>
 
+            <input
+              id="phone"
+              name="Phone"
+              type="tel"
+              placeholder="(208) 555-1234"
+              autocomplete="tel"
+              required
+            />
 
-        <!-- EMAIL -->
-
-        <label for="email">
-          Email Address
-        </label>
-
-        <input
-          id="email"
-          name="Email"
-          type="email"
-          placeholder="you@example.com"
-          autocomplete="email"
-        />
+          </div>
 
 
-        <!-- ADDRESS -->
+          <div>
+
+            <label for="email">
+              Email
+            </label>
+
+            <input
+              id="email"
+              name="Email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+            />
+
+          </div>
+
+        </div>
+
 
         <label for="address">
           Service Address
@@ -753,36 +861,39 @@
         />
 
 
-        <!-- SERVICE -->
 
-        <label>
-          What Service Do You Need?
+        <!-- SERVICE CHOICE -->
+
+        <label class="service-title">
+          Choose A Service
         </label>
 
 
-        <div class="service-choice">
+        <div class="service-grid">
 
-
-          <!-- RESIDENTIAL -->
 
           <div class="service-option">
 
             <input
-              type="radio"
               id="residentialService"
+              type="radio"
               name="Service Type"
-              value="Residential Garbage Cans"
+              value="Residential Garbage Can Cleaning"
               checked
             />
 
             <label for="residentialService">
 
+              <div class="service-emoji">
+                🗑
+              </div>
+
               <strong>
-                🗑 Garbage Cans
+                Garbage Cans
               </strong>
 
               <span>
-                Residential curbside garbage can cleaning.
+                Residential curbside cans
               </span>
 
             </label>
@@ -791,25 +902,27 @@
 
 
 
-          <!-- DUMPSTER -->
-
           <div class="service-option">
 
             <input
-              type="radio"
               id="dumpsterService"
+              type="radio"
               name="Service Type"
               value="Dumpster Cleaning"
             />
 
             <label for="dumpsterService">
 
+              <div class="service-emoji">
+                ♻
+              </div>
+
               <strong>
-                ♻ Dumpster Cleaning
+                Dumpster Cleaning
               </strong>
 
               <span>
-                Cleaning for commercial trash containers.
+                Commercial trash containers
               </span>
 
             </label>
@@ -818,25 +931,27 @@
 
 
 
-          <!-- PAD -->
-
           <div class="service-option">
 
             <input
-              type="radio"
               id="padService"
+              type="radio"
               name="Service Type"
               value="Dumpster Pad Cleaning"
             />
 
             <label for="padService">
 
+              <div class="service-emoji">
+                💦
+              </div>
+
               <strong>
-                💦 Dumpster Pad
+                Dumpster Pad
               </strong>
 
               <span>
-                Cleaning around commercial dumpster areas.
+                Concrete around dumpster areas
               </span>
 
             </label>
@@ -845,25 +960,27 @@
 
 
 
-          <!-- BOTH -->
-
           <div class="service-option">
 
             <input
-              type="radio"
               id="comboService"
+              type="radio"
               name="Service Type"
-              value="Dumpster + Pad Cleaning"
+              value="Dumpster and Pad Cleaning"
             />
 
             <label for="comboService">
 
+              <div class="service-emoji">
+                ✦
+              </div>
+
               <strong>
-                ✦ Dumpster + Pad
+                Dumpster + Pad
               </strong>
 
               <span>
-                Clean the container and surrounding pad.
+                Container and surrounding area
               </span>
 
             </label>
@@ -875,24 +992,24 @@
 
 
 
-        <!-- RESIDENTIAL SECTION -->
+        <!-- RESIDENTIAL -->
 
         <div
-          class="service-section active"
+          class="dynamic-section active"
           id="residentialSection"
         >
 
           <h3>
-            Residential Garbage Cans
+            Garbage Can Cleaning
           </h3>
 
           <p>
-            Enter the number of cans you'd like cleaned.
+            Choose the number of residential cans you want cleaned.
           </p>
 
 
           <label for="canCount">
-            Number Of Garbage Cans
+            Number Of Cans
           </label>
 
           <select
@@ -940,31 +1057,44 @@
               10 Cans
             </option>
 
+            <option value="11">
+              11 Cans
+            </option>
+
+            <option value="12">
+              12 Cans
+            </option>
+
           </select>
 
 
-          <div class="price-result">
+          <!-- CALCULATOR -->
 
-            <span>
-              Estimated Service Price
-            </span>
+          <div class="calculator">
 
-            <strong id="priceTotal">
-              $35
-            </strong>
+            <div class="calculator-label">
+              Estimated Price
+            </div>
 
             <div
-              class="price-breakdown"
+              class="calculator-price"
+              id="priceTotal"
+            >
+              $35
+            </div>
+
+            <div
+              class="calculator-breakdown"
               id="priceBreakdown"
             >
-              $35 first can
+              1 can × $35
             </div>
 
           </div>
 
 
           <label for="canFrequency">
-            Service Frequency
+            Service Type
           </label>
 
           <select
@@ -976,8 +1106,8 @@
               One-Time Cleaning
             </option>
 
-            <option value="Recurring - Interested">
-              Interested In Recurring Service
+            <option value="Interested in Recurring Cleaning">
+              Interested In Recurring Cleaning
             </option>
 
           </select>
@@ -986,19 +1116,19 @@
 
 
 
-        <!-- DUMPSTER SECTION -->
+        <!-- DUMPSTER DETAILS -->
 
         <div
-          class="service-section"
+          class="dynamic-section"
           id="dumpsterSection"
         >
 
           <h3>
-            Dumpster Cleaning Details
+            Dumpster Details
           </h3>
 
           <p>
-            Tell us about the dumpsters you'd like cleaned.
+            Give us a quick idea of the container size and quantity.
           </p>
 
 
@@ -1007,7 +1137,7 @@
             <div>
 
               <label for="dumpsterCount">
-                Number Of Dumpsters
+                Quantity
               </label>
 
               <input
@@ -1024,7 +1154,7 @@
             <div>
 
               <label for="dumpsterSize">
-                Approximate Size
+                Dumpster Size
               </label>
 
               <select
@@ -1036,8 +1166,8 @@
                   Select
                 </option>
 
-                <option value="Small Commercial Dumpster">
-                  Small Commercial Dumpster
+                <option value="Small Commercial">
+                  Small Commercial
                 </option>
 
                 <option value="2 Yard">
@@ -1056,8 +1186,8 @@
                   8 Yard
                 </option>
 
-                <option value="Roll-Off Dumpster">
-                  Roll-Off Dumpster
+                <option value="Roll-Off">
+                  Roll-Off
                 </option>
 
                 <option value="Not Sure">
@@ -1070,50 +1200,14 @@
 
           </div>
 
-
-          <label for="dumpsterFrequency">
-            Service Frequency
-          </label>
-
-          <select
-            id="dumpsterFrequency"
-            name="Dumpster Service Frequency"
-          >
-
-            <option value="">
-              Select
-            </option>
-
-            <option value="One-Time Cleaning">
-              One-Time Cleaning
-            </option>
-
-            <option value="Weekly">
-              Weekly
-            </option>
-
-            <option value="Every Two Weeks">
-              Every Two Weeks
-            </option>
-
-            <option value="Monthly">
-              Monthly
-            </option>
-
-            <option value="Recurring - Not Sure Yet">
-              Recurring - Not Sure Yet
-            </option>
-
-          </select>
-
         </div>
 
 
 
-        <!-- PAD SECTION -->
+        <!-- PAD DETAILS -->
 
         <div
-          class="service-section"
+          class="dynamic-section"
           id="padSection"
         >
 
@@ -1122,53 +1216,65 @@
           </h3>
 
           <p>
-            Tell us about the concrete or paved area around the dumpster.
+            Tell us about the area around the dumpster.
           </p>
 
 
-          <label for="padCount">
-            Number Of Dumpster Areas
-          </label>
+          <div class="two-column">
 
-          <input
-            id="padCount"
-            name="Number of Dumpster Pad Areas"
-            type="number"
-            min="1"
-            placeholder="1"
-          />
+            <div>
+
+              <label for="padCount">
+                Number Of Areas
+              </label>
+
+              <input
+                id="padCount"
+                name="Number of Dumpster Pad Areas"
+                type="number"
+                min="1"
+                placeholder="1"
+              />
+
+            </div>
 
 
-          <label for="padSize">
-            Approximate Pad Size
-          </label>
+            <div>
 
-          <select
-            id="padSize"
-            name="Dumpster Pad Size"
-          >
+              <label for="padSize">
+                Approximate Size
+              </label>
 
-            <option value="">
-              Select if known
-            </option>
+              <select
+                id="padSize"
+                name="Dumpster Pad Size"
+              >
 
-            <option value="Small - One Dumpster Area">
-              Small - One Dumpster Area
-            </option>
+                <option value="">
+                  Select
+                </option>
 
-            <option value="Medium - Two Dumpster Area">
-              Medium - Two Dumpster Area
-            </option>
+                <option value="Small">
+                  Small
+                </option>
 
-            <option value="Large Commercial Area">
-              Large Commercial Area
-            </option>
+                <option value="Medium">
+                  Medium
+                </option>
 
-            <option value="Not Sure">
-              Not Sure
-            </option>
+                <option value="Large">
+                  Large Commercial Area
+                </option>
 
-          </select>
+                <option value="Not Sure">
+                  Not Sure
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
 
 
           <label for="padCondition">
@@ -1188,11 +1294,11 @@
               General Dirt & Grime
             </option>
 
-            <option value="Grease / Oil">
+            <option value="Grease and Oil">
               Grease / Oil
             </option>
 
-            <option value="Food / Organic Residue">
+            <option value="Food and Organic Residue">
               Food / Organic Residue
             </option>
 
@@ -1200,24 +1306,51 @@
               Heavy Buildup
             </option>
 
-            <option value="Odor / Residue">
-              Odor / Residue
-            </option>
-
-            <option value="Mixed / Not Sure">
+            <option value="Mixed or Unknown">
               Mixed / Not Sure
             </option>
 
           </select>
 
+        </div>
 
-          <label for="padFrequency">
+
+
+        <!-- COMMERCIAL QUESTIONS -->
+
+        <div
+          class="dynamic-section"
+          id="commercialSection"
+        >
+
+          <h3>
+            Commercial Service
+          </h3>
+
+          <p>
+            A few details help us build a more accurate commercial quote.
+          </p>
+
+
+          <label for="businessName">
+            Business Name
+          </label>
+
+          <input
+            id="businessName"
+            name="Business Name"
+            type="text"
+            placeholder="Business name"
+          />
+
+
+          <label for="commercialFrequency">
             Service Frequency
           </label>
 
           <select
-            id="padFrequency"
-            name="Dumpster Pad Service Frequency"
+            id="commercialFrequency"
+            name="Commercial Service Frequency"
           >
 
             <option value="">
@@ -1240,27 +1373,20 @@
               Monthly
             </option>
 
-            <option value="Recurring - Not Sure Yet">
+            <option value="Recurring - Not Sure">
               Recurring - Not Sure Yet
             </option>
 
           </select>
 
-        </div>
 
+          <div class="custom-note">
 
+            Commercial dumpster and pad services are custom quoted.
+            Final pricing depends on size, condition, buildup,
+            quantity, and frequency.
 
-        <!-- CUSTOM NOTE -->
-
-        <div
-          class="custom-quote-note"
-          id="commercialNote"
-          style="display:none;"
-        >
-
-          Dumpster and dumpster pad services are custom quoted.
-          Pricing depends on size, number of containers or areas,
-          condition, buildup, and whether service is one-time or recurring.
+          </div>
 
         </div>
 
@@ -1268,7 +1394,7 @@
 
         <!-- PHOTOS -->
 
-        <div class="upload-section">
+        <div class="photo-area">
 
           <label for="photos">
             Photos
@@ -1282,7 +1408,7 @@
             </div>
 
             <p class="upload-title">
-              Add Service Photos
+              Add Photos
             </p>
 
             <input
@@ -1294,9 +1420,10 @@
             />
 
             <p class="upload-help">
-              For dumpsters and pads, photos are especially helpful.
-              Include a wider photo of the entire area plus close-ups
-              of heavy buildup, stains, grease, or problem spots.
+
+              Photos are optional for residential cans and strongly
+              recommended for dumpsters and dumpster pads.
+
             </p>
 
           </div>
@@ -1305,34 +1432,16 @@
 
 
 
-        <!-- BUSINESS -->
-
-        <label for="businessName">
-          Business Name
-          <span style="font-weight:400;text-transform:none;">
-            (if commercial)
-          </span>
-        </label>
-
-        <input
-          id="businessName"
-          name="Business Name"
-          type="text"
-          placeholder="Business name"
-        />
-
-
-
         <!-- DETAILS -->
 
         <label for="details">
-          Additional Details
+          Anything Else We Should Know?
         </label>
 
         <textarea
           id="details"
           name="Additional Details"
-          placeholder="Example: Two dumpsters behind a restaurant with grease buildup on the pad, or three residential cans that need a one-time cleaning..."
+          placeholder="Example: Dumpster behind restaurant with heavy grease buildup, gate access instructions, or special service request..."
         ></textarea>
 
 
@@ -1353,7 +1462,7 @@
       <div class="privacy">
 
         🔒 Your information and photos are only used to respond
-        to your service request.
+        to your Freshline service request.
 
       </div>
 
@@ -1371,7 +1480,7 @@
         &nbsp; | &nbsp;
 
         <a href="sms:2082704041">
-          Send a Text
+          Send A Text
         </a>
 
       </div>
@@ -1391,10 +1500,329 @@
 
 <script>
 
+  /*
+    ELEMENTS
+  */
+
   const residentialService =
     document.getElementById("residentialService");
 
   const dumpsterService =
     document.getElementById("dumpsterService");
 
-  const pad
+  const padService =
+    document.getElementById("padService");
+
+  const comboService =
+    document.getElementById("comboService");
+
+
+  const residentialSection =
+    document.getElementById("residentialSection");
+
+  const dumpsterSection =
+    document.getElementById("dumpsterSection");
+
+  const padSection =
+    document.getElementById("padSection");
+
+  const commercialSection =
+    document.getElementById("commercialSection");
+
+
+  const canCount =
+    document.getElementById("canCount");
+
+  const priceTotal =
+    document.getElementById("priceTotal");
+
+  const priceBreakdown =
+    document.getElementById("priceBreakdown");
+
+
+  const dumpsterCount =
+    document.getElementById("dumpsterCount");
+
+  const dumpsterSize =
+    document.getElementById("dumpsterSize");
+
+  const padCount =
+    document.getElementById("padCount");
+
+  const padSize =
+    document.getElementById("padSize");
+
+  const padCondition =
+    document.getElementById("padCondition");
+
+  const businessName =
+    document.getElementById("businessName");
+
+  const commercialFrequency =
+    document.getElementById("commercialFrequency");
+
+  const photos =
+    document.getElementById("photos");
+
+
+
+  /*
+    RESIDENTIAL PRICE CALCULATOR
+
+    $35 FIRST CAN
+    $20 EACH ADDITIONAL CAN
+  */
+
+  function updatePrice() {
+
+    let count =
+      parseInt(canCount.value, 10);
+
+
+    if (
+      Number.isNaN(count) ||
+      count < 1
+    ) {
+
+      count = 1;
+
+    }
+
+
+    const additional =
+      count - 1;
+
+
+    const total =
+      35 + (additional * 20);
+
+
+    priceTotal.textContent =
+      "$" + total;
+
+
+    if (count === 1) {
+
+      priceBreakdown.textContent =
+        "1 can × $35";
+
+    }
+
+    else {
+
+      priceBreakdown.textContent =
+        "$35 first can + " +
+        additional +
+        " additional " +
+        (additional === 1 ? "can" : "cans") +
+        " × $20";
+
+    }
+
+  }
+
+
+
+  /*
+    UPDATE SERVICE SECTIONS
+  */
+
+  function updateService() {
+
+    /*
+      HIDE EVERYTHING
+    */
+
+    residentialSection.classList.remove("active");
+
+    dumpsterSection.classList.remove("active");
+
+    padSection.classList.remove("active");
+
+    commercialSection.classList.remove("active");
+
+
+    /*
+      RESET REQUIRED FIELDS
+    */
+
+    dumpsterCount.required = false;
+
+    dumpsterSize.required = false;
+
+    padCount.required = false;
+
+    padSize.required = false;
+
+    padCondition.required = false;
+
+    businessName.required = false;
+
+    commercialFrequency.required = false;
+
+    photos.required = false;
+
+
+    /*
+      RESIDENTIAL
+    */
+
+    if (residentialService.checked) {
+
+      residentialSection.classList.add("active");
+
+      updatePrice();
+
+      return;
+
+    }
+
+
+    /*
+      DUMPSTER
+    */
+
+    if (dumpsterService.checked) {
+
+      dumpsterSection.classList.add("active");
+
+      commercialSection.classList.add("active");
+
+
+      dumpsterCount.required = true;
+
+      dumpsterSize.required = true;
+
+      businessName.required = true;
+
+      commercialFrequency.required = true;
+
+      photos.required = true;
+
+      return;
+
+    }
+
+
+    /*
+      DUMPSTER PAD
+    */
+
+    if (padService.checked) {
+
+      padSection.classList.add("active");
+
+      commercialSection.classList.add("active");
+
+
+      padCount.required = true;
+
+      padSize.required = true;
+
+      padCondition.required = true;
+
+      businessName.required = true;
+
+      commercialFrequency.required = true;
+
+      photos.required = true;
+
+      return;
+
+    }
+
+
+    /*
+      DUMPSTER + PAD
+    */
+
+    if (comboService.checked) {
+
+      dumpsterSection.classList.add("active");
+
+      padSection.classList.add("active");
+
+      commercialSection.classList.add("active");
+
+
+      dumpsterCount.required = true;
+
+      dumpsterSize.required = true;
+
+      padCount.required = true;
+
+      padSize.required = true;
+
+      padCondition.required = true;
+
+      businessName.required = true;
+
+      commercialFrequency.required = true;
+
+      photos.required = true;
+
+    }
+
+  }
+
+
+
+  /*
+    CALCULATOR EVENTS
+
+    INPUT + CHANGE MAKES IT
+    MORE RELIABLE ON MOBILE SAFARI
+  */
+
+  canCount.addEventListener(
+    "input",
+    updatePrice
+  );
+
+  canCount.addEventListener(
+    "change",
+    updatePrice
+  );
+
+
+
+  /*
+    SERVICE EVENTS
+  */
+
+  residentialService.addEventListener(
+    "change",
+    updateService
+  );
+
+  dumpsterService.addEventListener(
+    "change",
+    updateService
+  );
+
+  padService.addEventListener(
+    "change",
+    updateService
+  );
+
+  comboService.addEventListener(
+    "change",
+    updateService
+  );
+
+
+
+  /*
+    INITIAL PAGE LOAD
+  */
+
+  updatePrice();
+
+  updateService();
+
+</script>
+
+
+</body>
+
+</html>
