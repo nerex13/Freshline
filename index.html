@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Freshline Exterior Cleaning provides pressure washing, gutter cleaning, gutter brightening, garbage can cleaning, and exterior cleaning services in Rigby, Idaho Falls, Rexburg, and surrounding East Idaho."
+    content="Freshline Exterior Cleaning provides pressure washing, gutter cleaning, stain treatment, dumpster pad cleaning, storefront sidewalk cleaning, garbage can cleaning, and exterior cleaning services in Rigby, Idaho Falls, Rexburg, and surrounding East Idaho."
   />
 
   <style>
@@ -63,7 +63,7 @@
 
     .section-title p {
       margin: 12px auto 0;
-      max-width: 650px;
+      max-width: 700px;
       color: #555;
     }
 
@@ -179,7 +179,7 @@
     }
 
     .hero-copy p {
-      max-width: 690px;
+      max-width: 720px;
       margin: 24px 0 0;
       font-size: 19px;
       color: rgba(255,255,255,.92);
@@ -265,7 +265,7 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 18px;
     }
 
@@ -296,7 +296,7 @@
 
     .service-info {
       position: relative;
-      min-height: 240px;
+      min-height: 245px;
       padding: 38px 20px 22px;
       text-align: center;
     }
@@ -396,14 +396,14 @@
       color: #ccc;
     }
 
-    /* GARBAGE CAN PROMO */
+    /* COMMERCIAL SECTION */
 
-    .bin-section {
+    .commercial-section {
       padding: 65px 0;
       background: #f4f7f2;
     }
 
-    .bin-box {
+    .commercial-box {
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: center;
@@ -413,6 +413,38 @@
       border-radius: 10px;
       border-left: 6px solid #67c52f;
       box-shadow: 0 7px 25px rgba(0,0,0,.07);
+    }
+
+    .commercial-box h2 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 42px);
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .commercial-box p {
+      margin: 12px 0 0;
+      max-width: 720px;
+      color: #555;
+    }
+
+    /* BIN SECTION */
+
+    .bin-section {
+      padding: 65px 0;
+      background: #fff;
+    }
+
+    .bin-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 35px;
+      padding: 36px;
+      background: #f7faf4;
+      border-radius: 10px;
+      border-left: 6px solid #67c52f;
+      box-shadow: 0 7px 25px rgba(0,0,0,.05);
     }
 
     .bin-box h2 {
@@ -600,7 +632,7 @@
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.3fr .8fr .9fr 1fr;
+      grid-template-columns: 1.3fr .8fr 1fr 1fr;
       gap: 50px;
     }
 
@@ -642,10 +674,6 @@
         display: none;
       }
 
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
       .before-grid {
         grid-template-columns: 1fr;
       }
@@ -655,7 +683,8 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .bin-box {
+      .bin-box,
+      .commercial-box {
         grid-template-columns: 1fr;
       }
     }
@@ -738,20 +767,17 @@
         flex-direction: column;
       }
     }
-
   </style>
 </head>
 
 <body>
 
 <header>
-
   <div class="container">
 
     <nav>
 
       <a class="logo" href="index.html">
-
         <div class="logo-main">
           Fresh<span>line</span>
         </div>
@@ -759,23 +785,15 @@
         <div class="logo-sub">
           Exterior Cleaning
         </div>
-
       </a>
 
       <div class="nav-links">
-
         <a href="#home">Home</a>
-
         <a href="#services">Services</a>
-
         <a href="#about">About Us</a>
-
         <a href="#work">Our Work</a>
-
         <a href="#area">Service Area</a>
-
         <a href="#contact">Contact</a>
-
       </div>
 
       <a
@@ -788,7 +806,6 @@
     </nav>
 
   </div>
-
 </header>
 
 
@@ -797,10 +814,7 @@
 
 <!-- HERO -->
 
-<section
-  class="hero"
-  id="home"
->
+<section class="hero" id="home">
 
   <div class="container hero-inner">
 
@@ -813,8 +827,10 @@
 
       <p>
         Professional pressure washing, gutter cleaning,
-        garbage can cleaning, and exterior cleaning services
-        throughout Rigby, Idaho Falls, Rexburg, and surrounding East Idaho.
+        specialty stain treatment, garbage can cleaning,
+        dumpster area cleaning, storefront cleaning, and exterior
+        cleaning services throughout Rigby, Idaho Falls, Rexburg,
+        and surrounding East Idaho.
       </p>
 
       <div class="hero-buttons">
@@ -838,63 +854,30 @@
       <div class="trust-row">
 
         <div class="trust-item">
-
-          <div class="trust-icon">
-            ✓
-          </div>
+          <div class="trust-icon">✓</div>
 
           <div>
-
-            <strong>
-              Careful Service
-            </strong>
-
-            <span>
-              Your property is treated with care.
-            </span>
-
+            <strong>Careful Service</strong>
+            <span>Your property is treated with care.</span>
           </div>
-
         </div>
 
         <div class="trust-item">
-
-          <div class="trust-icon">
-            ★
-          </div>
+          <div class="trust-icon">★</div>
 
           <div>
-
-            <strong>
-              Quality Focused
-            </strong>
-
-            <span>
-              We take pride in the work we do.
-            </span>
-
+            <strong>Quality Focused</strong>
+            <span>We take pride in the work we do.</span>
           </div>
-
         </div>
 
         <div class="trust-item">
-
-          <div class="trust-icon">
-            ♻
-          </div>
+          <div class="trust-icon">♻</div>
 
           <div>
-
-            <strong>
-              Local Service
-            </strong>
-
-            <span>
-              Serving communities across East Idaho.
-            </span>
-
+            <strong>Local Service</strong>
+            <span>Serving communities across East Idaho.</span>
           </div>
-
         </div>
 
       </div>
@@ -909,10 +892,7 @@
 
 <!-- SERVICES -->
 
-<section
-  class="services-section"
-  id="services"
->
+<section class="services-section" id="services">
 
   <div class="container">
 
@@ -923,11 +903,13 @@
       </h2>
 
       <p>
-        Exterior cleaning services that help your property look
-        cleaner, brighter, and better maintained.
+        Residential and commercial exterior cleaning services
+        designed to keep concrete, gutters, outdoor areas, and
+        customer-facing spaces looking cleaner and better maintained.
       </p>
 
     </div>
+
 
     <div class="services-grid">
 
@@ -937,24 +919,18 @@
       <div class="service-card">
 
         <div class="service-image">
-
           <img
             src="https://static.wixstatic.com/media/ba3b72_cf19c4c62d6a4e1c86074ac76df57fa4~mv2.jpg/v1/fill/w_824,h_1099,al_c,q_85/Driveway%20Transformation.jpg"
             alt="Pressure washing a concrete driveway"
             loading="lazy"
           />
-
         </div>
 
         <div class="service-info">
 
-          <div class="service-icon">
-            ⌂
-          </div>
+          <div class="service-icon">⌂</div>
 
-          <h3>
-            Driveway Cleaning
-          </h3>
+          <h3>Driveway Cleaning</h3>
 
           <p>
             Remove dirt, grime, organic buildup, and staining
@@ -979,24 +955,18 @@
       <div class="service-card">
 
         <div class="service-image">
-
           <img
             src="https://images.squarespace-cdn.com/content/v1/60b531d7df3b1702ea4445c9/1628230268623-5QHWF1T1NKF0IXNG9W8S/Fence%2BCleaning"
             alt="Wood fence being cleaned"
             loading="lazy"
           />
-
         </div>
 
         <div class="service-info">
 
-          <div class="service-icon">
-            ▥
-          </div>
+          <div class="service-icon">▥</div>
 
-          <h3>
-            Fence Cleaning
-          </h3>
+          <h3>Fence Cleaning</h3>
 
           <p>
             Clean weathered fencing and remove surface dirt,
@@ -1021,24 +991,18 @@
       <div class="service-card">
 
         <div class="service-image">
-
           <img
             src="https://images.unsplash.com/photo-1592595896616-c37162298647?auto=format&fit=crop&w=900&q=85"
             alt="Outdoor patio cleaning"
             loading="lazy"
           />
-
         </div>
 
         <div class="service-info">
 
-          <div class="service-icon">
-            ▦
-          </div>
+          <div class="service-icon">▦</div>
 
-          <h3>
-            Patio Cleaning
-          </h3>
+          <h3>Patio Cleaning</h3>
 
           <p>
             Clean patios and outdoor living areas for a fresher,
@@ -1063,20 +1027,16 @@
       <div class="service-card">
 
         <div class="service-image">
-
           <img
             src="https://images.pexels.com/photos/20296972/pexels-photo-20296972.jpeg?auto=compress&cs=tinysrgb&w=900"
             alt="Worker pressure washing a concrete sidewalk"
             loading="lazy"
           />
-
         </div>
 
         <div class="service-info">
 
-          <div class="service-icon">
-            ↝
-          </div>
+          <div class="service-icon">↝</div>
 
           <h3>
             Sidewalk & Walkway Cleaning
@@ -1105,24 +1065,18 @@
       <div class="service-card">
 
         <div class="service-image">
-
           <img
             src="https://images.pexels.com/photos/35153375/pexels-photo-35153375.jpeg?auto=compress&cs=tinysrgb&w=900"
             alt="Residential gutter cleaning"
             loading="lazy"
           />
-
         </div>
 
         <div class="service-info">
 
-          <div class="service-icon">
-            ↓
-          </div>
+          <div class="service-icon">↓</div>
 
-          <h3>
-            Gutter Cleanouts
-          </h3>
+          <h3>Gutter Cleanouts</h3>
 
           <p>
             Remove leaves, dirt, and debris from inside gutters
@@ -1147,20 +1101,16 @@
       <div class="service-card">
 
         <div class="service-image">
-
           <img
             src="https://images.pexels.com/photos/17274402/pexels-photo-17274402.jpeg?auto=compress&cs=tinysrgb&w=900"
             alt="Exterior roof gutter and downspout"
             loading="lazy"
           />
-
         </div>
 
         <div class="service-info">
 
-          <div class="service-icon">
-            ✦
-          </div>
+          <div class="service-icon">✦</div>
 
           <h3>
             Gutter Exterior Brightening
@@ -1184,25 +1134,135 @@
 
 
 
-      <!-- GARBAGE CANS -->
+      <!-- SPECIALTY STAIN TREATMENT -->
 
       <div class="service-card">
 
         <div class="service-image">
+          <img
+            src="https://images.unsplash.com/photo-1597008641621-cefdcf718002?auto=format&fit=crop&w=900&q=85"
+            alt="Concrete surface cleaning"
+            loading="lazy"
+          />
+        </div>
 
+        <div class="service-info">
+
+          <div class="service-icon">◎</div>
+
+          <h3>
+            Specialty Stain Treatment
+          </h3>
+
+          <p>
+            Targeted treatment for oil, rust, grease, and
+            stubborn staining on concrete surfaces.
+          </p>
+
+          <a
+            class="service-quote-button"
+            href="quote.html"
+          >
+            Free Custom Quote →
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- STOREFRONT SIDEWALK -->
+
+      <div class="service-card">
+
+        <div class="service-image">
+          <img
+            src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=900&q=85"
+            alt="Commercial storefront and sidewalk"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="service-info">
+
+          <div class="service-icon">▤</div>
+
+          <h3>
+            Storefront Sidewalk Cleaning
+          </h3>
+
+          <p>
+            Keep storefront entrances, sidewalks, and customer
+            walkways looking clean and maintained.
+          </p>
+
+          <a
+            class="service-quote-button"
+            href="quote.html"
+          >
+            Free Custom Quote →
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- DUMPSTER PAD -->
+
+      <div class="service-card">
+
+        <div class="service-image">
+          <img
+            src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=900&q=85"
+            alt="Commercial dumpster area cleaning"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="service-info">
+
+          <div class="service-icon">▣</div>
+
+          <h3>
+            Dumpster Pad Cleaning
+          </h3>
+
+          <p>
+            Commercial dumpster-area cleaning to help remove
+            grime, residue, buildup, and odors.
+          </p>
+
+          <a
+            class="service-quote-button"
+            href="dumpster-quote.html"
+          >
+            Free Custom Quote →
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- GARBAGE CAN -->
+
+      <div class="service-card">
+
+        <div class="service-image">
           <img
             src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=900&q=85"
             alt="Garbage can cleaning service"
             loading="lazy"
           />
-
         </div>
 
         <div class="service-info">
 
-          <div class="service-icon">
-            ♻
-          </div>
+          <div class="service-icon">♻</div>
 
           <h3>
             Garbage Can Cleaning
@@ -1215,9 +1275,7 @@
 
           <div class="service-price">
 
-            <strong>
-              $35
-            </strong>
+            <strong>$35</strong>
             first can
 
             <br>
@@ -1239,6 +1297,7 @@
 
       </div>
 
+
     </div>
 
   </div>
@@ -1247,7 +1306,7 @@
 
 
 
-<!-- EXTERIOR CLEANING CTA -->
+<!-- EXTERIOR CTA -->
 
 <section class="quote-strip">
 
@@ -1281,6 +1340,47 @@
 
 
 
+<!-- COMMERCIAL CLEANING -->
+
+<section class="commercial-section">
+
+  <div class="container">
+
+    <div class="commercial-box">
+
+      <div>
+
+        <h2>
+          Commercial
+          <span class="green">
+            Exterior Cleaning
+          </span>
+        </h2>
+
+        <p>
+          Freshline offers storefront sidewalk cleaning,
+          dumpster pad cleaning, concrete cleaning, and other
+          exterior cleaning options for local businesses.
+          One-time and recurring service quotes are available.
+        </p>
+
+      </div>
+
+      <a
+        class="button button-green"
+        href="quote.html"
+      >
+        Commercial Quote →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
 <!-- GARBAGE CAN PROMO -->
 
 <section class="bin-section">
@@ -1300,22 +1400,18 @@
 
         <p>
           Residential garbage can cleaning with simple pricing.
-          Need a dumpster cleaned? Send us photos and details
-          for a custom quote.
+          Dumpster cleaning and dumpster pad cleaning are available
+          by custom quote.
         </p>
 
         <div class="bin-pricing">
 
-          <strong>
-            $35
-          </strong>
+          <strong>$35</strong>
           first can
 
           &nbsp; | &nbsp;
 
-          <strong>
-            $20
-          </strong>
+          <strong>$20</strong>
           each additional can
 
         </div>
@@ -1359,10 +1455,9 @@
 
     </div>
 
+
     <div class="before-grid">
 
-
-      <!-- DRIVEWAY WORK -->
 
       <div class="before-card">
 
@@ -1397,8 +1492,6 @@
 
 
 
-      <!-- FENCE WORK -->
-
       <div class="before-card">
 
         <div class="before-card-image">
@@ -1432,8 +1525,6 @@
 
 
 
-      <!-- WALKWAY WORK FIXED -->
-
       <div class="before-card">
 
         <div class="before-card-image">
@@ -1465,6 +1556,7 @@
 
       </div>
 
+
     </div>
 
   </div>
@@ -1493,20 +1585,14 @@
 
         <div class="why-item">
 
-          <div class="why-check">
-            ✓
-          </div>
+          <div class="why-check">✓</div>
 
           <div>
-
-            <strong>
-              Local & Reliable
-            </strong>
+            <strong>Local & Reliable</strong>
 
             <p>
               Serving Rigby, Idaho Falls, Rexburg, and nearby communities.
             </p>
-
           </div>
 
         </div>
@@ -1514,20 +1600,14 @@
 
         <div class="why-item">
 
-          <div class="why-check">
-            ✓
-          </div>
+          <div class="why-check">✓</div>
 
           <div>
-
-            <strong>
-              Quality Focused
-            </strong>
+            <strong>Quality Focused</strong>
 
             <p>
               We focus on careful, thorough exterior cleaning.
             </p>
-
           </div>
 
         </div>
@@ -1535,20 +1615,14 @@
 
         <div class="why-item">
 
-          <div class="why-check">
-            ✓
-          </div>
+          <div class="why-check">✓</div>
 
           <div>
-
-            <strong>
-              Clear Quotes
-            </strong>
+            <strong>Clear Quotes</strong>
 
             <p>
               Know what the job includes before work begins.
             </p>
-
           </div>
 
         </div>
@@ -1556,20 +1630,14 @@
 
         <div class="why-item">
 
-          <div class="why-check">
-            ✓
-          </div>
+          <div class="why-check">✓</div>
 
           <div>
-
-            <strong>
-              Fair Pricing
-            </strong>
+            <strong>Fair Pricing</strong>
 
             <p>
               Straightforward pricing with free estimates.
             </p>
-
           </div>
 
         </div>
@@ -1577,20 +1645,14 @@
 
         <div class="why-item">
 
-          <div class="why-check">
-            ✓
-          </div>
+          <div class="why-check">✓</div>
 
           <div>
-
-            <strong>
-              Property Focused
-            </strong>
+            <strong>Residential & Commercial</strong>
 
             <p>
-              Careful work around landscaping and nearby surfaces.
+              Cleaning options for homes, businesses, and outdoor areas.
             </p>
-
           </div>
 
         </div>
@@ -1598,23 +1660,18 @@
 
         <div class="why-item">
 
-          <div class="why-check">
-            ✓
-          </div>
+          <div class="why-check">✓</div>
 
           <div>
-
-            <strong>
-              Easy Scheduling
-            </strong>
+            <strong>Easy Scheduling</strong>
 
             <p>
               Call, text, upload photos, or request an on-site quote.
             </p>
-
           </div>
 
         </div>
+
 
       </div>
 
@@ -1664,13 +1721,10 @@
       </a>
 
       <div class="contact-line">
-
         ✉
-
         <a href="mailto:Freshline.Exteriors@protonmail.com">
           Freshline.Exteriors@protonmail.com
         </a>
-
       </div>
 
       <div class="contact-line">
@@ -1709,7 +1763,6 @@
           class="logo"
           href="index.html"
         >
-
           <div class="logo-main">
             Fresh<span>line</span>
           </div>
@@ -1717,12 +1770,11 @@
           <div class="logo-sub">
             Exterior Cleaning
           </div>
-
         </a>
 
         <p>
-          Professional exterior cleaning services that help
-          your property look its best.
+          Residential and commercial exterior cleaning services
+          throughout East Idaho.
         </p>
 
       </div>
@@ -1735,25 +1787,11 @@
           Quick Links
         </h4>
 
-        <a href="#home">
-          Home
-        </a>
-
-        <a href="#services">
-          Services
-        </a>
-
-        <a href="#work">
-          Our Work
-        </a>
-
-        <a href="#area">
-          Service Area
-        </a>
-
-        <a href="#contact">
-          Contact
-        </a>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#area">Service Area</a>
+        <a href="#contact">Contact</a>
 
       </div>
 
@@ -1765,21 +1803,21 @@
           Services
         </h4>
 
-        <span>
+        <a href="quote.html">
           Driveway Cleaning
-        </span>
+        </a>
 
-        <span>
+        <a href="quote.html">
           Fence Cleaning
-        </span>
+        </a>
 
-        <span>
+        <a href="quote.html">
           Patio Cleaning
-        </span>
+        </a>
 
-        <span>
+        <a href="quote.html">
           Sidewalk Cleaning
-        </span>
+        </a>
 
         <a href="quote.html">
           Gutter Cleanouts
@@ -1787,6 +1825,18 @@
 
         <a href="quote.html">
           Gutter Exterior Brightening
+        </a>
+
+        <a href="quote.html">
+          Specialty Stain Treatment
+        </a>
+
+        <a href="quote.html">
+          Storefront Sidewalk Cleaning
+        </a>
+
+        <a href="dumpster-quote.html">
+          Dumpster Pad Cleaning
         </a>
 
         <a href="dumpster-quote.html">
@@ -1821,6 +1871,7 @@
 
       </div>
 
+
     </div>
 
 
@@ -1832,7 +1883,7 @@
       </span>
 
       <span>
-        Free Quotes | Local Service
+        Free Quotes | Residential & Commercial Service
       </span>
 
     </div>
