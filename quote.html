@@ -91,8 +91,8 @@
       background:
         linear-gradient(
           90deg,
-          rgba(0,0,0,.86),
-          rgba(0,0,0,.60)
+          rgba(0,0,0,.88),
+          rgba(0,0,0,.62)
         ),
         url("https://static.wixstatic.com/media/ba3b72_cf19c4c62d6a4e1c86074ac76df57fa4~mv2.jpg/v1/fill/w_1500,h_1000,al_c,q_85/Driveway%20Transformation.jpg")
         center/cover no-repeat;
@@ -100,7 +100,7 @@
 
     .quote-layout {
       display: grid;
-      grid-template-columns: 1fr 460px;
+      grid-template-columns: 1fr 490px;
       gap: 65px;
       align-items: center;
     }
@@ -184,10 +184,151 @@
       background: white;
     }
 
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid rgba(103,197,47,.25);
+      border-color: #67c52f;
+    }
+
     textarea {
       min-height: 105px;
       resize: vertical;
     }
+
+    /* QUOTE METHOD */
+
+    .quote-choice {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .quote-option {
+      position: relative;
+    }
+
+    .quote-option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .quote-option label {
+      margin: 0;
+      min-height: 95px;
+      padding: 14px 10px;
+      border: 2px solid #ddd;
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      transition: .18s ease;
+    }
+
+    .quote-option label strong {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .quote-option label span {
+      margin-top: 6px;
+      color: #666;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 1.4;
+      text-transform: none;
+    }
+
+    .quote-option input:checked + label {
+      border-color: #67c52f;
+      background: #f3faee;
+      box-shadow: 0 0 0 1px #67c52f;
+    }
+
+    /* EXTRA SECTIONS */
+
+    .extra-section {
+      display: none;
+      margin-top: 18px;
+      padding: 18px;
+      border: 1px solid #dbe6d5;
+      border-radius: 7px;
+      background: #f8fbf6;
+    }
+
+    .extra-section.active {
+      display: block;
+    }
+
+    .extra-section label:first-child {
+      margin-top: 0;
+    }
+
+    /* PHOTO UPLOAD */
+
+    .upload-box {
+      padding: 20px;
+      border: 2px dashed #aaa;
+      border-radius: 7px;
+      background: white;
+      text-align: center;
+    }
+
+    .upload-icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .upload-title {
+      margin: 0 0 10px;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .upload-box input[type="file"] {
+      border: 0;
+      padding: 8px;
+      background: #f7f7f7;
+    }
+
+    .upload-help {
+      margin: 10px 0 0;
+      color: #777;
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    .photo-tip {
+      margin-top: 12px;
+      padding: 10px;
+      border-radius: 5px;
+      background: #edf7e7;
+      color: #3f5b31;
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    /* SCHEDULING */
+
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .visit-note {
+      margin: 0 0 13px;
+      color: #555;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    /* BUTTON */
 
     .submit-button {
       display: flex;
@@ -204,10 +345,12 @@
       font-size: 14px;
       font-weight: 900;
       text-transform: uppercase;
+      transition: .18s ease;
     }
 
     .submit-button:hover {
       filter: brightness(.94);
+      transform: translateY(-1px);
     }
 
     .privacy {
@@ -286,6 +429,11 @@
         padding: 24px 19px;
       }
 
+      .quote-choice,
+      .schedule-grid {
+        grid-template-columns: 1fr;
+      }
+
     }
 
   </style>
@@ -328,6 +476,8 @@
 
     <div class="container quote-layout">
 
+      <!-- LEFT SIDE -->
+
       <div class="quote-copy">
 
         <h1>
@@ -336,8 +486,8 @@
         </h1>
 
         <p>
-          Tell us what you need cleaned and we'll get in touch
-          about your project.
+          Send us photos for an estimate or request a time for
+          Freshline to come take a look at your property in person.
         </p>
 
         <div class="quote-feature">
@@ -347,7 +497,12 @@
 
         <div class="quote-feature">
           <span>✓</span>
-          No obligation
+          Upload photos directly
+        </div>
+
+        <div class="quote-feature">
+          <span>✓</span>
+          Request an in-person estimate
         </div>
 
         <div class="quote-feature">
@@ -362,6 +517,8 @@
 
       </div>
 
+      <!-- FORM -->
+
       <div class="quote-card">
 
         <h2>
@@ -369,25 +526,24 @@
         </h2>
 
         <p>
-          Fill out the information below.
+          Tell us about your property and choose how you'd like your estimate.
         </p>
 
         <form
-          action="https://formsubmit.co/Freshline.Exteriors@protonmail.com"
+          action="https://formspree.io/f/xvkpldaz"
           method="POST"
+          enctype="multipart/form-data"
         >
+
+          <!-- Lets Formspree know the subject -->
 
           <input
             type="hidden"
             name="_subject"
-            value="New Freshline Website Quote Request"
+            value="New Freshline Exterior Cleaning Quote Request"
           />
 
-          <input
-            type="hidden"
-            name="_captcha"
-            value="false"
-          />
+          <!-- NAME -->
 
           <label for="name">
             Full Name
@@ -398,8 +554,11 @@
             name="Name"
             type="text"
             placeholder="Your name"
+            autocomplete="name"
             required
           />
+
+          <!-- PHONE -->
 
           <label for="phone">
             Phone Number
@@ -410,8 +569,11 @@
             name="Phone"
             type="tel"
             placeholder="(208) 555-1234"
+            autocomplete="tel"
             required
           />
+
+          <!-- EMAIL -->
 
           <label for="email">
             Email Address
@@ -422,7 +584,10 @@
             name="Email"
             type="email"
             placeholder="you@example.com"
+            autocomplete="email"
           />
+
+          <!-- PROPERTY LOCATION -->
 
           <label for="location">
             Property Location
@@ -432,16 +597,20 @@
             id="location"
             name="Property Location"
             type="text"
-            placeholder="City or address"
+            placeholder="Street address, city, or area"
+            autocomplete="street-address"
+            required
           />
 
+          <!-- SERVICE -->
+
           <label for="service">
-            Service Needed
+            What Needs Cleaned?
           </label>
 
           <select
             id="service"
-            name="Service"
+            name="Service Needed"
             required
           >
 
@@ -449,31 +618,223 @@
               Select a service
             </option>
 
-            <option>
+            <option value="Driveway Cleaning">
               Driveway Cleaning
             </option>
 
-            <option>
+            <option value="Fence Cleaning">
               Fence Cleaning
             </option>
 
-            <option>
+            <option value="Patio Cleaning">
               Patio Cleaning
             </option>
 
-            <option>
+            <option value="Sidewalk / Walkway Cleaning">
               Sidewalk / Walkway Cleaning
             </option>
 
-            <option>
+            <option value="Multiple Services">
               Multiple Services
             </option>
 
-            <option>
+            <option value="Other Exterior Cleaning">
               Other Exterior Cleaning
             </option>
 
           </select>
+
+          <!-- QUOTE METHOD -->
+
+          <label>
+            How Would You Like Your Quote?
+          </label>
+
+          <div class="quote-choice">
+
+            <div class="quote-option">
+
+              <input
+                id="photoQuote"
+                type="radio"
+                name="Quote Method"
+                value="Quote From Photos"
+                checked
+              />
+
+              <label for="photoQuote">
+
+                <strong>
+                  📷 Quote From Photos
+                </strong>
+
+                <span>
+                  Upload pictures so we can review the area remotely.
+                </span>
+
+              </label>
+
+            </div>
+
+            <div class="quote-option">
+
+              <input
+                id="visitQuote"
+                type="radio"
+                name="Quote Method"
+                value="In-Person Estimate"
+              />
+
+              <label for="visitQuote">
+
+                <strong>
+                  📍 In-Person Estimate
+                </strong>
+
+                <span>
+                  Request a time for us to come look at the property.
+                </span>
+
+              </label>
+
+            </div>
+
+          </div>
+
+          <!-- PHOTO QUOTE -->
+
+          <div
+            class="extra-section active"
+            id="photoSection"
+          >
+
+            <label for="photos">
+              Pictures Of The Area
+            </label>
+
+            <div class="upload-box">
+
+              <div class="upload-icon">
+                📷
+              </div>
+
+              <p class="upload-title">
+                Add Project Photos
+              </p>
+
+              <input
+                id="photos"
+                name="project_photos"
+                type="file"
+                accept="image/jpeg,image/png,image/webp,image/heic,image/heif"
+                multiple
+              />
+
+              <p class="upload-help">
+                Select clear photos showing the areas you want cleaned.
+                You can select multiple pictures.
+              </p>
+
+            </div>
+
+            <div class="photo-tip">
+              <strong>Photo tip:</strong>
+              Include one photo showing the entire area and a few closer
+              photos of heavy dirt, staining, moss, buildup, or problem spots.
+            </div>
+
+          </div>
+
+          <!-- IN-PERSON QUOTE -->
+
+          <div
+            class="extra-section"
+            id="visitSection"
+          >
+
+            <p class="visit-note">
+              Choose a preferred day and time. This is a request,
+              not a confirmed appointment. Freshline will contact you
+              to confirm the visit.
+            </p>
+
+            <label for="visitAddress">
+              Property Address
+            </label>
+
+            <input
+              id="visitAddress"
+              name="In-Person Estimate Address"
+              type="text"
+              placeholder="Street address, city, ZIP"
+            />
+
+            <div class="schedule-grid">
+
+              <div>
+
+                <label for="preferredDate">
+                  Preferred Date
+                </label>
+
+                <input
+                  id="preferredDate"
+                  name="Preferred Estimate Date"
+                  type="date"
+                />
+
+              </div>
+
+              <div>
+
+                <label for="preferredTime">
+                  Preferred Time
+                </label>
+
+                <select
+                  id="preferredTime"
+                  name="Preferred Estimate Time"
+                >
+
+                  <option value="">
+                    Select a time
+                  </option>
+
+                  <option value="Morning">
+                    Morning
+                  </option>
+
+                  <option value="Afternoon">
+                    Afternoon
+                  </option>
+
+                  <option value="Evening">
+                    Evening
+                  </option>
+
+                  <option value="Any Time">
+                    Any Time
+                  </option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+            <label for="scheduleNotes">
+              Visit Instructions
+            </label>
+
+            <textarea
+              id="scheduleNotes"
+              name="In-Person Estimate Notes"
+              placeholder="Example: Please text before arriving, gate is on the left side..."
+            ></textarea>
+
+          </div>
+
+          <!-- DETAILS -->
 
           <label for="message">
             Tell Us About Your Project
@@ -482,8 +843,10 @@
           <textarea
             id="message"
             name="Project Details"
-            placeholder="Example: two-car driveway with dirt and staining..."
+            placeholder="Example: Two-car concrete driveway with dark buildup and staining near the garage..."
           ></textarea>
+
+          <!-- SUBMIT -->
 
           <button
             class="submit-button"
@@ -495,7 +858,7 @@
         </form>
 
         <div class="privacy">
-          🔒 Your information stays private.
+          🔒 Your information and project photos are only used to respond to your quote request.
         </div>
 
         <div class="direct-contact">
@@ -521,6 +884,96 @@
   </section>
 
 </main>
+
+<script>
+
+  const photoQuote =
+    document.getElementById("photoQuote");
+
+  const visitQuote =
+    document.getElementById("visitQuote");
+
+  const photoSection =
+    document.getElementById("photoSection");
+
+  const visitSection =
+    document.getElementById("visitSection");
+
+  const photos =
+    document.getElementById("photos");
+
+  const visitAddress =
+    document.getElementById("visitAddress");
+
+  const preferredDate =
+    document.getElementById("preferredDate");
+
+  const preferredTime =
+    document.getElementById("preferredTime");
+
+
+  function updateQuoteMethod() {
+
+    if (photoQuote.checked) {
+
+      photoSection.classList.add("active");
+      visitSection.classList.remove("active");
+
+      photos.required = true;
+
+      visitAddress.required = false;
+      preferredDate.required = false;
+      preferredTime.required = false;
+
+    } else {
+
+      photoSection.classList.remove("active");
+      visitSection.classList.add("active");
+
+      photos.required = false;
+
+      visitAddress.required = true;
+      preferredDate.required = true;
+      preferredTime.required = true;
+
+    }
+
+  }
+
+
+  photoQuote.addEventListener(
+    "change",
+    updateQuoteMethod
+  );
+
+  visitQuote.addEventListener(
+    "change",
+    updateQuoteMethod
+  );
+
+
+  /*
+    Prevent customers from requesting
+    an estimate date in the past.
+  */
+
+  const now = new Date();
+
+  const year = now.getFullYear();
+
+  const month =
+    String(now.getMonth() + 1).padStart(2, "0");
+
+  const day =
+    String(now.getDate()).padStart(2, "0");
+
+  preferredDate.min =
+    `${year}-${month}-${day}`;
+
+
+  updateQuoteMethod();
+
+</script>
 
 </body>
 </html>
