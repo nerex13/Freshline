@@ -114,6 +114,7 @@
 
     .page {
       padding: 56px 0 70px;
+
       background:
         linear-gradient(
           90deg,
@@ -275,6 +276,12 @@
       font-size: 11px;
       font-weight: 900;
       text-transform: uppercase;
+    }
+
+    .optional {
+      font-weight: 400;
+      text-transform: none;
+      color: #666;
     }
 
     input,
@@ -649,6 +656,7 @@
         class="logo"
         href="index.html"
       >
+
         <div class="logo-main">
           Fresh<span>line</span>
         </div>
@@ -656,6 +664,7 @@
         <div class="logo-sub">
           Exterior Cleaning
         </div>
+
       </a>
 
 
@@ -716,12 +725,12 @@
 
         <div class="feature">
           <span class="feature-icon">✓</span>
-          One-time and recurring service options
+          One-time service
         </div>
 
         <div class="feature">
           <span class="feature-icon">✓</span>
-          Free commercial quotes
+          Ask us about recurring cleaning
         </div>
 
       </div>
@@ -752,7 +761,7 @@
 
         <p>
           Dumpster and dumpster pad services are custom quoted
-          based on size, quantity, condition, buildup, and service frequency.
+          based on size, quantity, condition, buildup, and service needs.
         </p>
 
       </div>
@@ -872,6 +881,8 @@
         <div class="service-grid">
 
 
+          <!-- GARBAGE CANS -->
+
           <div class="service-option">
 
             <input
@@ -902,6 +913,8 @@
 
 
 
+          <!-- DUMPSTER -->
+
           <div class="service-option">
 
             <input
@@ -931,6 +944,8 @@
 
 
 
+          <!-- PAD -->
+
           <div class="service-option">
 
             <input
@@ -959,6 +974,8 @@
           </div>
 
 
+
+          <!-- BOTH -->
 
           <div class="service-option">
 
@@ -1017,55 +1034,21 @@
             name="Number of Garbage Cans"
           >
 
-            <option value="1">
-              1 Can
-            </option>
-
-            <option value="2">
-              2 Cans
-            </option>
-
-            <option value="3">
-              3 Cans
-            </option>
-
-            <option value="4">
-              4 Cans
-            </option>
-
-            <option value="5">
-              5 Cans
-            </option>
-
-            <option value="6">
-              6 Cans
-            </option>
-
-            <option value="7">
-              7 Cans
-            </option>
-
-            <option value="8">
-              8 Cans
-            </option>
-
-            <option value="9">
-              9 Cans
-            </option>
-
-            <option value="10">
-              10 Cans
-            </option>
-
-            <option value="11">
-              11 Cans
-            </option>
-
-            <option value="12">
-              12 Cans
-            </option>
+            <option value="1">1 Can</option>
+            <option value="2">2 Cans</option>
+            <option value="3">3 Cans</option>
+            <option value="4">4 Cans</option>
+            <option value="5">5 Cans</option>
+            <option value="6">6 Cans</option>
+            <option value="7">7 Cans</option>
+            <option value="8">8 Cans</option>
+            <option value="9">9 Cans</option>
+            <option value="10">10 Cans</option>
+            <option value="11">11 Cans</option>
+            <option value="12">12 Cans</option>
 
           </select>
+
 
 
           <!-- CALCULATOR -->
@@ -1093,21 +1076,22 @@
           </div>
 
 
+
           <label for="canFrequency">
-            Service Type
+            Service Preference
           </label>
 
           <select
             id="canFrequency"
-            name="Garbage Can Service Frequency"
+            name="Garbage Can Service Preference"
           >
 
-            <option value="One-Time Cleaning">
-              One-Time Cleaning
+            <option value="One-Time Service">
+              One-Time Service
             </option>
 
-            <option value="Interested in Recurring Cleaning">
-              Interested In Recurring Cleaning
+            <option value="Ask Me About Recurring Service">
+              Ask Me About Recurring Service
             </option>
 
           </select>
@@ -1116,7 +1100,7 @@
 
 
 
-        <!-- DUMPSTER DETAILS -->
+        <!-- DUMPSTER -->
 
         <div
           class="dynamic-section"
@@ -1134,6 +1118,7 @@
 
           <div class="two-column">
 
+
             <div>
 
               <label for="dumpsterCount">
@@ -1149,6 +1134,7 @@
               />
 
             </div>
+
 
 
             <div>
@@ -1198,13 +1184,14 @@
 
             </div>
 
+
           </div>
 
         </div>
 
 
 
-        <!-- PAD DETAILS -->
+        <!-- PAD -->
 
         <div
           class="dynamic-section"
@@ -1222,6 +1209,7 @@
 
           <div class="two-column">
 
+
             <div>
 
               <label for="padCount">
@@ -1237,6 +1225,7 @@
               />
 
             </div>
+
 
 
             <div>
@@ -1273,6 +1262,7 @@
               </select>
 
             </div>
+
 
           </div>
 
@@ -1316,7 +1306,7 @@
 
 
 
-        <!-- COMMERCIAL QUESTIONS -->
+        <!-- COMMERCIAL -->
 
         <div
           class="dynamic-section"
@@ -1328,53 +1318,45 @@
           </h3>
 
           <p>
-            A few details help us build a more accurate commercial quote.
+            A few details help us build a more accurate quote.
           </p>
 
 
           <label for="businessName">
             Business Name
+            <span class="optional">
+              (if applicable)
+            </span>
           </label>
 
           <input
             id="businessName"
             name="Business Name"
             type="text"
-            placeholder="Business name"
+            placeholder="Business name, if applicable"
           />
 
 
+
           <label for="commercialFrequency">
-            Service Frequency
+            Service Preference
           </label>
 
           <select
             id="commercialFrequency"
-            name="Commercial Service Frequency"
+            name="Commercial Service Preference"
           >
 
             <option value="">
               Select
             </option>
 
-            <option value="One-Time Cleaning">
-              One-Time Cleaning
+            <option value="One-Time Service">
+              One-Time Service
             </option>
 
-            <option value="Weekly">
-              Weekly
-            </option>
-
-            <option value="Every Two Weeks">
-              Every Two Weeks
-            </option>
-
-            <option value="Monthly">
-              Monthly
-            </option>
-
-            <option value="Recurring - Not Sure">
-              Recurring - Not Sure Yet
+            <option value="Ask Me About Recurring Service">
+              Ask Me About Recurring Service
             </option>
 
           </select>
@@ -1382,9 +1364,9 @@
 
           <div class="custom-note">
 
-            Commercial dumpster and pad services are custom quoted.
-            Final pricing depends on size, condition, buildup,
-            quantity, and frequency.
+            Dumpster and dumpster pad services are custom quoted.
+            We offer one-time service, and recurring cleaning options
+            may be available based on your needs.
 
           </div>
 
@@ -1459,12 +1441,14 @@
       </form>
 
 
+
       <div class="privacy">
 
         🔒 Your information and photos are only used to respond
         to your Freshline service request.
 
       </div>
+
 
 
       <div class="direct-contact">
@@ -1546,6 +1530,7 @@
   const dumpsterSize =
     document.getElementById("dumpsterSize");
 
+
   const padCount =
     document.getElementById("padCount");
 
@@ -1555,8 +1540,6 @@
   const padCondition =
     document.getElementById("padCondition");
 
-  const businessName =
-    document.getElementById("businessName");
 
   const commercialFrequency =
     document.getElementById("commercialFrequency");
@@ -1567,10 +1550,10 @@
 
 
   /*
-    RESIDENTIAL PRICE CALCULATOR
+    CAN PRICE CALCULATOR
 
-    $35 FIRST CAN
-    $20 EACH ADDITIONAL CAN
+    FIRST CAN = $35
+    EACH ADDITIONAL = $20
   */
 
   function updatePrice() {
@@ -1624,13 +1607,13 @@
 
 
   /*
-    UPDATE SERVICE SECTIONS
+    SWITCH SERVICE SECTIONS
   */
 
   function updateService() {
 
     /*
-      HIDE EVERYTHING
+      HIDE ALL DYNAMIC SECTIONS
     */
 
     residentialSection.classList.remove("active");
@@ -1643,7 +1626,7 @@
 
 
     /*
-      RESET REQUIRED FIELDS
+      REMOVE CONDITIONAL REQUIRED FIELDS
     */
 
     dumpsterCount.required = false;
@@ -1656,15 +1639,14 @@
 
     padCondition.required = false;
 
-    businessName.required = false;
-
     commercialFrequency.required = false;
 
     photos.required = false;
 
 
+
     /*
-      RESIDENTIAL
+      RESIDENTIAL CANS
     */
 
     if (residentialService.checked) {
@@ -1678,8 +1660,9 @@
     }
 
 
+
     /*
-      DUMPSTER
+      DUMPSTER ONLY
     */
 
     if (dumpsterService.checked) {
@@ -1693,8 +1676,6 @@
 
       dumpsterSize.required = true;
 
-      businessName.required = true;
-
       commercialFrequency.required = true;
 
       photos.required = true;
@@ -1704,8 +1685,9 @@
     }
 
 
+
     /*
-      DUMPSTER PAD
+      DUMPSTER PAD ONLY
     */
 
     if (padService.checked) {
@@ -1721,8 +1703,6 @@
 
       padCondition.required = true;
 
-      businessName.required = true;
-
       commercialFrequency.required = true;
 
       photos.required = true;
@@ -1730,6 +1710,7 @@
       return;
 
     }
+
 
 
     /*
@@ -1755,8 +1736,6 @@
 
       padCondition.required = true;
 
-      businessName.required = true;
-
       commercialFrequency.required = true;
 
       photos.required = true;
@@ -1768,10 +1747,7 @@
 
 
   /*
-    CALCULATOR EVENTS
-
-    INPUT + CHANGE MAKES IT
-    MORE RELIABLE ON MOBILE SAFARI
+    PRICE EVENTS
   */
 
   canCount.addEventListener(
@@ -1813,7 +1789,7 @@
 
 
   /*
-    INITIAL PAGE LOAD
+    INITIAL LOAD
   */
 
   updatePrice();
