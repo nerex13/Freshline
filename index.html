@@ -33,6 +33,11 @@
       color: inherit;
     }
 
+    img {
+      width: 100%;
+      display: block;
+    }
+
     .container {
       width: min(1100px, calc(100% - 32px));
       margin: auto;
@@ -41,8 +46,9 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(255,255,255,0.95);
+      z-index: 50;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid #dce8e6;
     }
 
@@ -88,6 +94,10 @@
       font-weight: 700;
     }
 
+    .nav-links a:hover {
+      color: #0d6b66;
+    }
+
     .button {
       display: inline-flex;
       align-items: center;
@@ -98,6 +108,11 @@
       font-weight: 800;
       border: none;
       cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
     }
 
     .button-primary {
@@ -115,8 +130,10 @@
       color: #0d6b66;
     }
 
+    /* HERO */
+
     .hero {
-      padding: 90px 0;
+      padding: 75px 0;
       background:
         radial-gradient(circle at 85% 20%, #c8f0eb 0, transparent 30%),
         linear-gradient(180deg, #fafffe 0%, #f4faf8 100%);
@@ -124,7 +141,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1fr 1fr;
       gap: 55px;
       align-items: center;
     }
@@ -164,7 +181,7 @@
     }
 
     .contact-row {
-      margin-top: 35px;
+      margin-top: 30px;
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
@@ -179,29 +196,42 @@
       font-weight: 700;
     }
 
-    .hero-card {
-      background: white;
-      border-radius: 28px;
-      padding: 32px;
-      box-shadow: 0 25px 70px rgba(13,107,102,0.15);
+    /* HERO PHOTO */
+
+    .hero-photo {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      min-height: 540px;
+      box-shadow: 0 25px 70px rgba(13,107,102,0.18);
+      background: #dce8e6;
     }
 
-    .hero-card h3 {
-      margin-top: 0;
-      font-size: 26px;
+    .hero-photo img {
+      width: 100%;
+      height: 540px;
+      object-fit: cover;
     }
 
-    .hero-card-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 24px;
+    .photo-badge {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      right: 22px;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(10px);
+      border-radius: 18px;
+      padding: 18px 20px;
     }
 
-    .hero-card-item {
-      padding: 18px;
-      border-radius: 16px;
-      background: #edf8f6;
-      font-weight: 700;
+    .photo-badge strong {
+      display: block;
+      font-size: 18px;
+    }
+
+    .photo-badge span {
+      font-size: 13px;
+      color: #607476;
     }
 
     section {
@@ -225,6 +255,8 @@
       margin-top: 16px;
     }
 
+    /* SERVICES */
+
     .services {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -232,15 +264,42 @@
     }
 
     .service-card {
-      padding: 26px;
-      min-height: 240px;
+      overflow: hidden;
       border-radius: 22px;
       border: 1px solid #dce8e6;
+      background: white;
+      transition: 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(16,40,43,0.1);
+    }
+
+    .service-photo {
+      height: 180px;
+      overflow: hidden;
+      background: #edf8f6;
+    }
+
+    .service-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.3s ease;
+    }
+
+    .service-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .service-content {
+      padding: 24px;
     }
 
     .service-number {
-      width: 45px;
-      height: 45px;
+      width: 42px;
+      height: 42px;
       display: grid;
       place-items: center;
       border-radius: 13px;
@@ -250,7 +309,7 @@
     }
 
     .service-card h3 {
-      margin-top: 35px;
+      margin-top: 22px;
       margin-bottom: 8px;
     }
 
@@ -258,6 +317,8 @@
       color: #607476;
       font-size: 14px;
     }
+
+    /* WHY */
 
     .why {
       background: #f4f3ed;
@@ -270,26 +331,17 @@
       align-items: center;
     }
 
-    .dark-card {
-      background: #102f31;
-      color: white;
-      padding: 35px;
+    .why-photo {
       border-radius: 28px;
+      overflow: hidden;
+      height: 520px;
+      box-shadow: 0 20px 55px rgba(16,40,43,0.13);
     }
 
-    .dark-card-item {
-      padding: 22px 0;
-      border-top: 1px solid rgba(255,255,255,0.13);
-    }
-
-    .dark-card-item:first-child {
-      border-top: none;
-    }
-
-    .dark-card-item p {
-      color: rgba(255,255,255,0.7);
-      margin: 6px 0 0;
-      font-size: 14px;
+    .why-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .why-copy h2 {
@@ -305,10 +357,11 @@
     .checklist {
       list-style: none;
       padding: 0;
+      margin: 26px 0;
     }
 
     .checklist li {
-      margin: 12px 0;
+      margin: 14px 0;
       font-weight: 700;
     }
 
@@ -317,6 +370,8 @@
       color: #0d6b66;
       margin-right: 10px;
     }
+
+    /* SERVICE AREA */
 
     .area {
       background: #0d6b66;
@@ -328,6 +383,7 @@
     .area h2 {
       font-size: clamp(34px, 5vw, 50px);
       margin-top: 0;
+      margin-bottom: 12px;
     }
 
     .area p {
@@ -349,57 +405,27 @@
       font-weight: 800;
     }
 
-    .quote-grid {
+    /* PHOTO STRIP */
+
+    .photo-strip {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 55px;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
     }
 
-    .quote-copy h2 {
-      font-size: clamp(36px, 5vw, 52px);
-      line-height: 1.05;
-    }
-
-    .quote-copy p {
-      color: #607476;
-    }
-
-    form {
-      padding: 28px;
+    .strip-photo {
+      height: 360px;
       border-radius: 24px;
-      border: 1px solid #dce8e6;
-      background: white;
-      box-shadow: 0 20px 55px rgba(20,70,70,0.08);
+      overflow: hidden;
     }
 
-    label {
-      display: block;
-      margin-bottom: 16px;
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    input,
-    select,
-    textarea {
+    .strip-photo img {
       width: 100%;
-      margin-top: 7px;
-      border: 1px solid #d6e3e0;
-      border-radius: 12px;
-      padding: 14px;
-      font: inherit;
-      background: #fbfdfc;
+      height: 100%;
+      object-fit: cover;
     }
 
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .full-button {
-      width: 100%;
-      margin-top: 5px;
-    }
+    /* CTA */
 
     .cta {
       background: #0d6b66;
@@ -416,6 +442,8 @@
     .cta h2 {
       margin: 0;
       font-size: clamp(34px, 5vw, 50px);
+      max-width: 650px;
+      line-height: 1.05;
     }
 
     footer {
@@ -447,18 +475,24 @@
       }
 
       .hero-grid,
-      .why-grid,
-      .quote-grid {
+      .why-grid {
         grid-template-columns: 1fr;
       }
 
       .services {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .hero-photo,
+      .hero-photo img {
+        height: 460px;
+        min-height: 460px;
+      }
     }
 
     @media (max-width: 600px) {
-      .services {
+      .services,
+      .photo-strip {
         grid-template-columns: 1fr;
       }
 
@@ -469,6 +503,20 @@
       h1 {
         font-size: 52px;
         letter-spacing: -3px;
+      }
+
+      .hero-photo,
+      .hero-photo img {
+        height: 380px;
+        min-height: 380px;
+      }
+
+      .why-photo {
+        height: 360px;
+      }
+
+      .strip-photo {
+        height: 280px;
       }
 
       .cta-inner,
@@ -484,6 +532,12 @@
       .area {
         padding: 28px;
       }
+
+      nav .button {
+        padding: 0 14px;
+        min-height: 44px;
+        font-size: 13px;
+      }
     }
   </style>
 </head>
@@ -493,7 +547,8 @@
 <header>
   <div class="container">
     <nav>
-      <a class="logo" href="#">
+
+      <a class="logo" href="index.html">
         <div class="logo-icon">F</div>
         <div class="logo-text">
           Freshline
@@ -505,21 +560,27 @@
         <a href="#services">Services</a>
         <a href="#why">Why Us</a>
         <a href="#area">Service Area</a>
-        <a href="#quote">Quote</a>
+        <a href="quote.html">Quote</a>
       </div>
 
-      <a class="button button-dark" href="#quote">Free Quote</a>
+      <a class="button button-dark" href="quote.html">
+        Free Quote
+      </a>
+
     </nav>
   </div>
 </header>
 
 <main>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="container hero-grid">
 
       <div>
-        <div class="eyebrow">East Idaho Exterior Cleaning</div>
+        <div class="eyebrow">
+          East Idaho Exterior Cleaning
+        </div>
 
         <h1>
           Bring back the <span>clean.</span>
@@ -532,7 +593,8 @@
         </p>
 
         <div class="hero-buttons">
-          <a class="button button-primary" href="#quote">
+
+          <a class="button button-primary" href="quote.html">
             Get a Free Quote
           </a>
 
@@ -543,9 +605,11 @@
           <a class="button button-dark" href="sms:2082704041">
             Text Us
           </a>
+
         </div>
 
         <div class="contact-row">
+
           <a class="contact-pill" href="tel:2082704041">
             📞 (208) 270-4041
           </a>
@@ -556,32 +620,40 @@
           >
             ✉ Freshline.Exteriors@protonmail.com
           </a>
+
         </div>
       </div>
 
-      <div class="hero-card">
-        <div class="eyebrow">Now booking</div>
+      <div class="hero-photo">
 
-        <h3>
-          Make your property look fresh again.
-        </h3>
+        <img
+          src="https://unsplash.com/photos/kQHsQmLLV2I/download?force=true&w=1400"
+          alt="Professional pressure washing"
+        />
 
-        <div class="hero-card-list">
-          <div class="hero-card-item">✓ Driveway Cleaning</div>
-          <div class="hero-card-item">✓ Fence Washing</div>
-          <div class="hero-card-item">✓ Patio Cleaning</div>
-          <div class="hero-card-item">✓ Sidewalks & Walkways</div>
+        <div class="photo-badge">
+          <strong>Fresh exterior. Better first impression.</strong>
+          <span>
+            Residential pressure washing throughout East Idaho.
+          </span>
         </div>
+
       </div>
 
     </div>
   </section>
 
+
+  <!-- SERVICES -->
+
   <section id="services">
     <div class="container">
 
       <div class="section-title">
-        <div class="eyebrow">Our services</div>
+
+        <div class="eyebrow">
+          Our Services
+        </div>
 
         <h2>
           Simple services. Big visual difference.
@@ -591,81 +663,146 @@
           Exterior cleaning for homeowners who want their property looking
           cleaner without turning it into a giant project.
         </p>
+
       </div>
 
       <div class="services">
 
         <div class="service-card">
-          <div class="service-number">01</div>
-          <h3>Driveways</h3>
-          <p>
-            Remove dirt, grime, organic buildup, and everyday surface staining
-            from concrete.
-          </p>
+
+          <div class="service-photo">
+            <img
+              src="https://unsplash.com/photos/kQHsQmLLV2I/download?force=true&w=800"
+              alt="Driveway pressure washing"
+            />
+          </div>
+
+          <div class="service-content">
+
+            <div class="service-number">
+              01
+            </div>
+
+            <h3>
+              Driveways
+            </h3>
+
+            <p>
+              Remove dirt, grime, organic buildup, and everyday surface
+              staining from concrete.
+            </p>
+
+          </div>
         </div>
 
-        <div class="service-card">
-          <div class="service-number">02</div>
-          <h3>Fences</h3>
-          <p>
-            Clean dirty and weathered fence surfaces using a method appropriate
-            for the material.
-          </p>
-        </div>
 
         <div class="service-card">
-          <div class="service-number">03</div>
-          <h3>Patios</h3>
-          <p>
-            Freshen up outdoor spaces so patios and gathering areas look cared
-            for again.
-          </p>
+
+          <div class="service-photo">
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85"
+              alt="Clean residential exterior and fencing"
+            />
+          </div>
+
+          <div class="service-content">
+
+            <div class="service-number">
+              02
+            </div>
+
+            <h3>
+              Fences
+            </h3>
+
+            <p>
+              Clean dirty and weathered fence surfaces using a method
+              appropriate for the material.
+            </p>
+
+          </div>
         </div>
 
+
         <div class="service-card">
-          <div class="service-number">04</div>
-          <h3>Walkways</h3>
-          <p>
-            Clean sidewalks, paths, entrances, and other small exterior
-            surfaces.
-          </p>
+
+          <div class="service-photo">
+            <img
+              src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85"
+              alt="Clean residential patio"
+            />
+          </div>
+
+          <div class="service-content">
+
+            <div class="service-number">
+              03
+            </div>
+
+            <h3>
+              Patios
+            </h3>
+
+            <p>
+              Freshen up outdoor spaces so patios and gathering areas look
+              cared for again.
+            </p>
+
+          </div>
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-photo">
+            <img
+              src="https://unsplash.com/photos/cbvSffXeUO0/download?force=true&w=800"
+              alt="Exterior surface cleaning"
+            />
+          </div>
+
+          <div class="service-content">
+
+            <div class="service-number">
+              04
+            </div>
+
+            <h3>
+              Walkways
+            </h3>
+
+            <p>
+              Clean sidewalks, paths, entrances, and other small exterior
+              surfaces.
+            </p>
+
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
+
+  <!-- WHY -->
+
   <section class="why" id="why">
     <div class="container why-grid">
 
-      <div class="dark-card">
+      <div class="why-photo">
 
-        <div class="dark-card-item">
-          <strong>Clear Quotes</strong>
-          <p>
-            Know what the job includes and what it costs before the work starts.
-          </p>
-        </div>
-
-        <div class="dark-card-item">
-          <strong>Property-Focused Work</strong>
-          <p>
-            Careful cleaning around landscaping, edges, gates, and nearby
-            surfaces.
-          </p>
-        </div>
-
-        <div class="dark-card-item">
-          <strong>Local Service</strong>
-          <p>
-            Straightforward exterior cleaning for homeowners around East Idaho.
-          </p>
-        </div>
+        <img
+          src="https://unsplash.com/photos/cbvSffXeUO0/download?force=true&w=1200"
+          alt="Pressure washing exterior surface"
+        />
 
       </div>
 
       <div class="why-copy">
-        <div class="eyebrow">Why Freshline</div>
+
+        <div class="eyebrow">
+          Why Freshline
+        </div>
 
         <h2>
           Getting your property cleaned should be easy.
@@ -681,25 +818,40 @@
           <li>Free estimates</li>
           <li>Photo-based quotes available</li>
           <li>Local East Idaho service</li>
+          <li>Call or text for quick scheduling</li>
         </ul>
+
+        <a class="button button-primary" href="quote.html">
+          Request a Free Quote
+        </a>
+
       </div>
 
     </div>
   </section>
 
+
+  <!-- SERVICE AREA -->
+
   <section id="area">
     <div class="container">
 
       <div class="area">
-        <div class="eyebrow" style="color:#c8f0eb;">
+
+        <div
+          class="eyebrow"
+          style="color:#c8f0eb;"
+        >
           Service Area
         </div>
 
-        <h2>Serving East Idaho.</h2>
+        <h2>
+          Serving East Idaho.
+        </h2>
 
         <p>
-          Based around Rigby and serving Idaho Falls, Rexburg, and nearby East
-          Idaho communities.
+          Based around Rigby and serving Idaho Falls, Rexburg, and nearby
+          East Idaho communities.
         </p>
 
         <div class="area-pills">
@@ -708,123 +860,99 @@
           <span>Rexburg</span>
           <span>Nearby East Idaho</span>
         </div>
+
       </div>
 
     </div>
   </section>
 
-  <section id="quote">
-    <div class="container quote-grid">
 
-      <div class="quote-copy">
-        <div class="eyebrow">Free Estimate</div>
+  <!-- MORE PHOTOS -->
+
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+
+        <div class="eyebrow">
+          Exterior Cleaning
+        </div>
 
         <h2>
-          Tell us what needs cleaning.
+          A cleaner exterior changes the whole property.
         </h2>
 
-        <p>
-          Fill out the form and your email app will open with your quote request
-          ready to send.
-        </p>
-
-        <p>
-          <strong>Phone:</strong>
-          <a href="tel:2082704041">(208) 270-4041</a>
-        </p>
-
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:Freshline.Exteriors@protonmail.com">
-            Freshline.Exteriors@protonmail.com
-          </a>
-        </p>
       </div>
 
-      <form id="quoteForm">
+      <div class="photo-strip">
 
-        <label>
-          Name
-          <input
-            type="text"
-            id="name"
-            placeholder="Your name"
-            required
+        <div class="strip-photo">
+
+          <img
+            src="https://unsplash.com/photos/kQHsQmLLV2I/download?force=true&w=1200"
+            alt="Driveway being professionally cleaned"
           />
-        </label>
 
-        <label>
-          Phone
-          <input
-            type="tel"
-            id="phone"
-            placeholder="(208) 555-0123"
-            required
+        </div>
+
+        <div class="strip-photo">
+
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
+            alt="Clean residential home exterior"
           />
-        </label>
 
-        <label>
-          Service
-          <select id="service" required>
-            <option value="">Choose a service</option>
-            <option>Driveway Cleaning</option>
-            <option>Fence Washing</option>
-            <option>Patio Cleaning</option>
-            <option>Sidewalk / Walkway</option>
-            <option>Other Exterior Cleaning</option>
-          </select>
-        </label>
+        </div>
 
-        <label>
-          Job Details
-          <textarea
-            id="details"
-            placeholder="Example: Two-car driveway in Rigby with moderate dirt buildup."
-            required
-          ></textarea>
-        </label>
+      </div>
 
-        <button
-          class="button button-primary full-button"
-          type="submit"
-        >
-          Send Quote Request
-        </button>
-
-      </form>
     </div>
   </section>
 
+
+  <!-- CTA -->
+
   <section class="cta">
+
     <div class="container cta-inner">
 
       <h2>
-        Make the outside look cared for again.
+        Ready to make your property look fresh again?
       </h2>
 
-      <a class="button button-light" href="#quote">
+      <a class="button button-light" href="quote.html">
         Get a Free Quote
       </a>
 
     </div>
+
   </section>
 
 </main>
 
+
 <footer>
+
   <div class="container footer-row">
 
     <div class="logo">
-      <div class="logo-icon">F</div>
+
+      <div class="logo-icon">
+        F
+      </div>
+
       <div class="logo-text">
         Freshline
+
         <small style="color:rgba(255,255,255,.6);">
           Exterior Cleaning
         </small>
       </div>
+
     </div>
 
     <div class="footer-contact">
+
       <a href="tel:2082704041">
         (208) 270-4041
       </a>
@@ -836,54 +964,17 @@
       <span>
         © <span id="year"></span> Freshline Exterior Cleaning
       </span>
+
     </div>
 
   </div>
+
 </footer>
+
 
 <script>
   document.getElementById("year").textContent =
     new Date().getFullYear();
-
-  document
-    .getElementById("quoteForm")
-    .addEventListener("submit", function(event) {
-
-      event.preventDefault();
-
-      const name =
-        document.getElementById("name").value;
-
-      const phone =
-        document.getElementById("phone").value;
-
-      const service =
-        document.getElementById("service").value;
-
-      const details =
-        document.getElementById("details").value;
-
-      const email =
-        "Freshline.Exteriors@protonmail.com";
-
-      const subject =
-        encodeURIComponent(
-          "Freshline Quote Request - " + service
-        );
-
-      const body =
-        encodeURIComponent(
-`Name: ${name}
-Phone: ${phone}
-Service: ${service}
-
-Job Details:
-${details}`
-        );
-
-      window.location.href =
-        `mailto:${email}?subject=${subject}&body=${body}`;
-    });
 </script>
 
 </body>
