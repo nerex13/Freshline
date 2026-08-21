@@ -14,13 +14,17 @@
 
   <meta
     name="description"
-    content="Request a free pressure washing, gutter cleaning, or exterior cleaning quote from Freshline Exterior Cleaning in East Idaho."
+    content="Request a free pressure washing, gutter cleaning, stain treatment, storefront cleaning, or exterior cleaning quote from Freshline Exterior Cleaning in East Idaho."
   />
 
   <style>
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -107,8 +111,8 @@
       background:
         linear-gradient(
           90deg,
-          rgba(0,0,0,.88),
-          rgba(0,0,0,.62)
+          rgba(0,0,0,.90),
+          rgba(0,0,0,.64)
         ),
         url("https://static.wixstatic.com/media/ba3b72_cf19c4c62d6a4e1c86074ac76df57fa4~mv2.jpg/v1/fill/w_1500,h_1000,al_c,q_85/Driveway%20Transformation.jpg")
         center/cover no-repeat;
@@ -116,9 +120,9 @@
 
     .quote-layout {
       display: grid;
-      grid-template-columns: 1fr 490px;
+      grid-template-columns: 1fr 500px;
       gap: 65px;
-      align-items: center;
+      align-items: start;
     }
 
 
@@ -126,6 +130,8 @@
 
     .quote-copy {
       color: white;
+      position: sticky;
+      top: 35px;
     }
 
     .quote-copy h1 {
@@ -156,6 +162,23 @@
     .quote-feature span {
       color: #67c52f;
       margin-right: 8px;
+    }
+
+    .commercial-note {
+      margin-top: 28px;
+      max-width: 520px;
+      padding: 18px;
+      border-left: 4px solid #67c52f;
+      border-radius: 5px;
+      background: rgba(0,0,0,.45);
+      font-size: 13px;
+      line-height: 1.55;
+      color: rgba(255,255,255,.9);
+    }
+
+    .commercial-note strong {
+      color: #67c52f;
+      text-transform: uppercase;
     }
 
 
@@ -222,6 +245,40 @@
     }
 
 
+    /* CONDITIONAL BOXES */
+
+    .conditional-box {
+      display: none;
+      margin-top: 15px;
+      padding: 16px;
+      border: 1px solid #dbe6d5;
+      border-left: 4px solid #67c52f;
+      border-radius: 7px;
+      background: #f5faF2;
+    }
+
+    .conditional-box.active {
+      display: block;
+    }
+
+    .conditional-box h3 {
+      margin: 0 0 8px;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .conditional-box p {
+      margin: 0 0 12px;
+      color: #555;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .conditional-box label:first-of-type {
+      margin-top: 0;
+    }
+
+
     /* QUOTE METHOD */
 
     .quote-choice {
@@ -243,7 +300,7 @@
 
     .quote-option label {
       margin: 0;
-      min-height: 95px;
+      min-height: 100px;
       padding: 14px 10px;
       border: 2px solid #ddd;
       border-radius: 7px;
@@ -277,7 +334,7 @@
     }
 
 
-    /* CONDITIONAL SECTIONS */
+    /* PHOTO / VISIT SECTIONS */
 
     .extra-section {
       display: none;
@@ -292,12 +349,8 @@
       display: block;
     }
 
-    .extra-section label:first-child {
-      margin-top: 0;
-    }
 
-
-    /* PHOTO UPLOAD */
+    /* UPLOAD */
 
     .upload-box {
       padding: 20px;
@@ -342,25 +395,6 @@
     }
 
 
-    /* GUTTER INFO */
-
-    .gutter-info {
-      display: none;
-      margin-top: 14px;
-      padding: 13px;
-      border-left: 4px solid #67c52f;
-      border-radius: 5px;
-      background: #f3faee;
-      color: #456039;
-      font-size: 11px;
-      line-height: 1.5;
-    }
-
-    .gutter-info.active {
-      display: block;
-    }
-
-
     /* SCHEDULING */
 
     .schedule-grid {
@@ -377,7 +411,20 @@
     }
 
 
-    /* SUBMIT BUTTON */
+    /* DISCLAIMER */
+
+    .stain-disclaimer {
+      margin-top: 10px;
+      padding: 10px;
+      background: #fff8e8;
+      border-radius: 5px;
+      font-size: 10px;
+      color: #69542b;
+      line-height: 1.5;
+    }
+
+
+    /* SUBMIT */
 
     .submit-button {
       display: flex;
@@ -436,16 +483,18 @@
       }
 
       .quote-copy {
+        position: static;
         text-align: center;
       }
 
-      .quote-copy p {
+      .quote-copy p,
+      .commercial-note {
         margin-left: auto;
         margin-right: auto;
       }
 
       .quote-card {
-        max-width: 560px;
+        max-width: 580px;
         margin: 0 auto;
         width: 100%;
       }
@@ -563,41 +612,57 @@
         Freshline to come take a look at your property in person.
       </p>
 
+
       <div class="quote-feature">
         <span>✓</span>
-        Pressure washing
+        Driveways, patios & sidewalks
       </div>
 
       <div class="quote-feature">
         <span>✓</span>
-        Gutter cleanouts
+        Gutter cleaning & brightening
       </div>
 
       <div class="quote-feature">
         <span>✓</span>
-        Gutter exterior brightening
+        Oil & rust stain treatment
       </div>
 
       <div class="quote-feature">
         <span>✓</span>
-        Upload project photos
+        Storefront sidewalk cleaning
       </div>
 
       <div class="quote-feature">
         <span>✓</span>
-        Request an in-person estimate
+        Residential & commercial service
       </div>
 
       <div class="quote-feature">
         <span>✓</span>
-        Local East Idaho service
+        Photo or in-person estimates
+      </div>
+
+
+      <div class="commercial-note">
+
+        <strong>
+          Business Owner?
+        </strong>
+
+        <br><br>
+
+        We offer storefront sidewalk and concrete cleaning
+        for local businesses. One-time and recurring service
+        requests are welcome.
+
       </div>
 
     </div>
 
 
 
-    <!-- QUOTE FORM -->
+    <!-- FORM CARD -->
 
     <div class="quote-card">
 
@@ -616,8 +681,6 @@
         enctype="multipart/form-data"
       >
 
-
-        <!-- FORM SUBJECT -->
 
         <input
           type="hidden"
@@ -673,10 +736,10 @@
         />
 
 
-        <!-- LOCATION -->
+        <!-- PROPERTY LOCATION -->
 
         <label for="location">
-          Property Location
+          Property / Job Location
         </label>
 
         <input
@@ -733,6 +796,14 @@
             Gutter Cleanout + Exterior Brightening
           </option>
 
+          <option value="Specialty Stain Treatment">
+            Specialty Stain Treatment
+          </option>
+
+          <option value="Storefront Sidewalk Cleaning">
+            Storefront Sidewalk Cleaning
+          </option>
+
           <option value="Multiple Exterior Cleaning Services">
             Multiple Services
           </option>
@@ -744,19 +815,296 @@
         </select>
 
 
-        <!-- GUTTER INFORMATION -->
+
+        <!-- GUTTER OPTIONS -->
 
         <div
-          class="gutter-info"
-          id="gutterInfo"
+          class="conditional-box"
+          id="gutterBox"
         >
 
-          For gutter services, photos of the front and back of the
-          home are especially helpful. If possible, include photos
-          showing the gutter line, visible debris, streaking, and
-          the approximate number of stories.
+          <h3>
+            Gutter Service Details
+          </h3>
+
+          <p>
+            A few details help us estimate gutter work more accurately.
+          </p>
+
+
+          <label for="gutterStories">
+            Number Of Stories
+          </label>
+
+          <select
+            id="gutterStories"
+            name="Gutter Property Stories"
+          >
+
+            <option value="">
+              Select
+            </option>
+
+            <option value="1 Story">
+              1 Story
+            </option>
+
+            <option value="2 Stories">
+              2 Stories
+            </option>
+
+            <option value="3+ Stories">
+              3+ Stories
+            </option>
+
+          </select>
+
+
+          <label for="gutterCondition">
+            Gutter Condition
+          </label>
+
+          <select
+            id="gutterCondition"
+            name="Gutter Condition"
+          >
+
+            <option value="">
+              Select if known
+            </option>
+
+            <option value="Light Debris">
+              Light debris
+            </option>
+
+            <option value="Moderate Debris">
+              Moderate debris
+            </option>
+
+            <option value="Heavy / Full Gutters">
+              Heavy / full gutters
+            </option>
+
+            <option value="Visible Exterior Streaking">
+              Exterior streaking / black marks
+            </option>
+
+            <option value="Not Sure">
+              Not sure
+            </option>
+
+          </select>
 
         </div>
+
+
+
+        <!-- STAIN OPTIONS -->
+
+        <div
+          class="conditional-box"
+          id="stainBox"
+        >
+
+          <h3>
+            Specialty Stain Details
+          </h3>
+
+          <p>
+            Tell us what kind of staining you're dealing with.
+          </p>
+
+
+          <label for="stainType">
+            Type Of Stain
+          </label>
+
+          <select
+            id="stainType"
+            name="Stain Type"
+          >
+
+            <option value="">
+              Select a stain type
+            </option>
+
+            <option value="Oil">
+              Oil
+            </option>
+
+            <option value="Rust">
+              Rust
+            </option>
+
+            <option value="Grease">
+              Grease
+            </option>
+
+            <option value="Oil and Rust">
+              Oil & Rust
+            </option>
+
+            <option value="Other / Unknown">
+              Other / Not Sure
+            </option>
+
+          </select>
+
+
+          <label for="stainAge">
+            Approximate Age Of Stain
+          </label>
+
+          <select
+            id="stainAge"
+            name="Approximate Stain Age"
+          >
+
+            <option value="">
+              Select if known
+            </option>
+
+            <option value="Fresh / Less Than One Week">
+              Fresh / less than 1 week
+            </option>
+
+            <option value="1 Week to 1 Month">
+              1 week to 1 month
+            </option>
+
+            <option value="1 to 6 Months">
+              1 to 6 months
+            </option>
+
+            <option value="6+ Months">
+              6+ months
+            </option>
+
+            <option value="Unknown">
+              Not sure
+            </option>
+
+          </select>
+
+
+          <div class="stain-disclaimer">
+
+            Specialty stain treatment is intended to improve or remove
+            staining where possible. Some deep or older stains may not
+            disappear completely.
+
+          </div>
+
+        </div>
+
+
+
+        <!-- STOREFRONT OPTIONS -->
+
+        <div
+          class="conditional-box"
+          id="storefrontBox"
+        >
+
+          <h3>
+            Storefront Service Details
+          </h3>
+
+          <p>
+            Let us know whether you're looking for a one-time
+            cleaning or ongoing service.
+          </p>
+
+
+          <label for="businessName">
+            Business Name
+          </label>
+
+          <input
+            id="businessName"
+            name="Business Name"
+            type="text"
+            placeholder="Business name"
+          />
+
+
+          <label for="commercialFrequency">
+            Service Frequency
+          </label>
+
+          <select
+            id="commercialFrequency"
+            name="Commercial Service Frequency"
+          >
+
+            <option value="">
+              Select
+            </option>
+
+            <option value="One-Time Cleaning">
+              One-Time Cleaning
+            </option>
+
+            <option value="Weekly">
+              Weekly
+            </option>
+
+            <option value="Every Two Weeks">
+              Every Two Weeks
+            </option>
+
+            <option value="Monthly">
+              Monthly
+            </option>
+
+            <option value="Seasonal">
+              Seasonal
+            </option>
+
+            <option value="Recurring - Not Sure Yet">
+              Recurring - Not Sure Yet
+            </option>
+
+          </select>
+
+
+          <label for="storefrontSize">
+            Approximate Area
+          </label>
+
+          <select
+            id="storefrontSize"
+            name="Approximate Storefront Cleaning Area"
+          >
+
+            <option value="">
+              Select if known
+            </option>
+
+            <option value="Small Entrance Area">
+              Small Entrance Area
+            </option>
+
+            <option value="Single Storefront Sidewalk">
+              Single Storefront Sidewalk
+            </option>
+
+            <option value="Large Storefront / Multiple Entrances">
+              Large Storefront / Multiple Entrances
+            </option>
+
+            <option value="Shopping Center / Large Area">
+              Shopping Center / Large Area
+            </option>
+
+            <option value="Not Sure">
+              Not Sure
+            </option>
+
+          </select>
+
+        </div>
+
 
 
         <!-- QUOTE METHOD -->
@@ -768,8 +1116,6 @@
 
         <div class="quote-choice">
 
-
-          <!-- PHOTO QUOTE -->
 
           <div class="quote-option">
 
@@ -788,7 +1134,7 @@
               </strong>
 
               <span>
-                Upload pictures so we can review the area remotely.
+                Upload pictures so we can review the project remotely.
               </span>
 
             </label>
@@ -796,8 +1142,6 @@
           </div>
 
 
-
-          <!-- IN PERSON -->
 
           <div class="quote-option">
 
@@ -815,7 +1159,7 @@
               </strong>
 
               <span>
-                Request a time for us to come look at the property.
+                Request a time for us to look at the property.
               </span>
 
             </label>
@@ -827,7 +1171,7 @@
 
 
 
-        <!-- PHOTO QUOTE SECTION -->
+        <!-- PHOTO SECTION -->
 
         <div
           class="extra-section active"
@@ -867,13 +1211,16 @@
           </div>
 
 
-          <div class="photo-tip">
+          <div
+            class="photo-tip"
+            id="photoTip"
+          >
 
             <strong>Photo tip:</strong>
 
-            Include one photo showing the entire area and closer
-            photos of staining, buildup, leaves, moss, gutter streaks,
-            or other problem areas.
+            Include one wider photo showing the entire area
+            and closer photos of stains, buildup, grime,
+            leaves, gutter streaks, or problem areas.
 
           </div>
 
@@ -977,40 +1324,39 @@
             placeholder="Example: Please text before arriving, gate is on the left side..."
           ></textarea>
 
-
         </div>
 
 
 
-        <!-- PROPERTY DETAILS -->
+        <!-- GENERAL PROPERTY TYPE -->
 
-        <label for="stories">
-          Number Of Stories
+        <label for="propertyType">
+          Property Type
         </label>
 
         <select
-          id="stories"
-          name="Number of Stories"
+          id="propertyType"
+          name="Property Type"
         >
 
           <option value="">
             Select if applicable
           </option>
 
-          <option value="1 Story">
-            1 Story
+          <option value="Residential">
+            Residential
           </option>
 
-          <option value="2 Stories">
-            2 Stories
+          <option value="Commercial">
+            Commercial
           </option>
 
-          <option value="3+ Stories">
-            3+ Stories
+          <option value="Rental Property">
+            Rental Property
           </option>
 
-          <option value="Not Applicable">
-            Not Applicable
+          <option value="Other">
+            Other
           </option>
 
         </select>
@@ -1026,7 +1372,7 @@
         <textarea
           id="message"
           name="Project Details"
-          placeholder="Example: Two-car driveway with dark buildup, or two-story home with gutters full of leaves..."
+          placeholder="Example: Two-car driveway with oil staining, two-story gutters full of leaves, or storefront sidewalk that needs monthly cleaning..."
         ></textarea>
 
 
@@ -1046,7 +1392,10 @@
 
 
       <div class="privacy">
-        🔒 Your information and project photos are only used to respond to your quote request.
+
+        🔒 Your information and project photos are only used
+        to respond to your quote request.
+
       </div>
 
 
@@ -1111,13 +1460,31 @@
   const service =
     document.getElementById("service");
 
-  const gutterInfo =
-    document.getElementById("gutterInfo");
+  const gutterBox =
+    document.getElementById("gutterBox");
+
+  const stainBox =
+    document.getElementById("stainBox");
+
+  const storefrontBox =
+    document.getElementById("storefrontBox");
+
+  const gutterStories =
+    document.getElementById("gutterStories");
+
+  const stainType =
+    document.getElementById("stainType");
+
+  const businessName =
+    document.getElementById("businessName");
+
+  const commercialFrequency =
+    document.getElementById("commercialFrequency");
+
 
 
   /*
-    SWITCH BETWEEN PHOTO QUOTE
-    AND IN-PERSON ESTIMATE
+    PHOTO QUOTE VS IN-PERSON
   */
 
   function updateQuoteMethod() {
@@ -1159,32 +1526,91 @@
 
 
   /*
-    SHOW GUTTER PHOTO TIPS
-    WHEN A GUTTER SERVICE IS SELECTED
+    SERVICE-SPECIFIC QUESTIONS
   */
 
-  function updateServiceInfo() {
+  function updateServiceDetails() {
 
-    const selectedService =
+    const selected =
       service.value.toLowerCase();
 
+
+    /*
+      RESET BOXES
+    */
+
+    gutterBox.classList.remove("active");
+
+    stainBox.classList.remove("active");
+
+    storefrontBox.classList.remove("active");
+
+
+    gutterStories.required = false;
+
+    stainType.required = false;
+
+    businessName.required = false;
+
+    commercialFrequency.required = false;
+
+
+
+    /*
+      GUTTERS
+    */
+
     if (
-      selectedService.includes("gutter")
+      selected.includes("gutter")
     ) {
 
-      gutterInfo.classList.add("active");
+      gutterBox.classList.add("active");
+
+      gutterStories.required = true;
 
     }
 
-    else {
 
-      gutterInfo.classList.remove("active");
+
+    /*
+      SPECIALTY STAINS
+    */
+
+    if (
+      selected.includes("stain")
+    ) {
+
+      stainBox.classList.add("active");
+
+      stainType.required = true;
+
+    }
+
+
+
+    /*
+      STOREFRONT
+    */
+
+    if (
+      selected.includes("storefront")
+    ) {
+
+      storefrontBox.classList.add("active");
+
+      businessName.required = true;
+
+      commercialFrequency.required = true;
 
     }
 
   }
 
 
+
+  /*
+    EVENTS
+  */
 
   photoQuote.addEventListener(
     "change",
@@ -1200,7 +1626,7 @@
 
   service.addEventListener(
     "change",
-    updateServiceInfo
+    updateServiceDetails
   );
 
 
@@ -1230,9 +1656,13 @@
 
 
 
+  /*
+    INITIALIZE
+  */
+
   updateQuoteMethod();
 
-  updateServiceInfo();
+  updateServiceDetails();
 
 </script>
 
