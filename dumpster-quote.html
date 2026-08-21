@@ -114,7 +114,7 @@
       align-items: center;
     }
 
-    /* LEFT */
+    /* LEFT SIDE */
 
     .quote-copy {
       color: white;
@@ -244,7 +244,7 @@
       resize: vertical;
     }
 
-    /* TYPE BUTTONS */
+    /* SERVICE TYPE */
 
     .cleaning-choice {
       display: grid;
@@ -275,6 +275,7 @@
       justify-content: center;
       cursor: pointer;
       text-align: center;
+      transition: .18s ease;
     }
 
     .cleaning-option label strong {
@@ -310,7 +311,7 @@
       display: block;
     }
 
-    /* PRICE PREVIEW */
+    /* PRICE */
 
     .price-preview {
       margin-top: 16px;
@@ -327,6 +328,13 @@
       color: #67c52f;
       font-size: 26px;
       font-weight: 900;
+    }
+
+    .pricing-breakdown {
+      margin-top: 9px;
+      color: #777;
+      font-size: 10px;
+      text-align: center;
     }
 
     /* UPLOAD */
@@ -369,10 +377,12 @@
       font-size: 14px;
       font-weight: 900;
       text-transform: uppercase;
+      transition: .18s ease;
     }
 
     .submit-button:hover {
       filter: brightness(.94);
+      transform: translateY(-1px);
     }
 
     .privacy {
@@ -503,7 +513,7 @@
 
   <div class="container quote-layout">
 
-    <!-- LEFT SIDE -->
+    <!-- LEFT -->
 
     <div class="quote-copy">
 
@@ -513,8 +523,8 @@
       </h1>
 
       <p>
-        Residential garbage can cleaning with straightforward pricing,
-        plus custom quotes for larger dumpsters and commercial containers.
+        Residential garbage can cleaning with simple pricing,
+        plus custom quotes for dumpsters and larger commercial containers.
       </p>
 
       <div class="pricing-box">
@@ -528,7 +538,7 @@
         </div>
 
         <div class="price-extra">
-          + $15 for each additional can
+          + $20 for each additional can
         </div>
 
         <div class="dumpster-note">
@@ -730,6 +740,10 @@
 
           </div>
 
+          <div class="pricing-breakdown">
+            $35 for the first can + $20 for each additional can.
+          </div>
+
         </div>
 
 
@@ -852,8 +866,9 @@
           />
 
           <p class="upload-help">
-            For dumpsters, photos are especially helpful. Include the
-            entire container and any heavy buildup or problem areas.
+            Photos help us understand the condition of the cans or dumpster.
+            For dumpsters, include the entire container and any areas with
+            heavy buildup, grease, residue, or staining.
           </p>
 
         </div>
@@ -868,7 +883,7 @@
         <textarea
           id="details"
           name="Additional Details"
-          placeholder="Tell us about buildup, odors, grease, location access, recurring service needs, or anything else we should know."
+          placeholder="Tell us about buildup, odors, grease, access, recurring service needs, or anything else we should know."
         ></textarea>
 
 
@@ -932,6 +947,9 @@
   const dumpsterCount =
     document.getElementById("dumpsterCount");
 
+  const dumpsterSize =
+    document.getElementById("dumpsterSize");
+
   const priceTotal =
     document.getElementById("priceTotal");
 
@@ -939,7 +957,7 @@
   /*
     Residential pricing:
     $35 first can
-    $15 each additional can
+    $20 each additional can
   */
 
   function updatePrice() {
@@ -952,7 +970,7 @@
     }
 
     const total =
-      35 + ((count - 1) * 15);
+      35 + ((count - 1) * 20);
 
     priceTotal.textContent =
       "$" + total;
@@ -972,6 +990,8 @@
 
       dumpsterCount.required = false;
 
+      dumpsterSize.required = false;
+
     } else {
 
       canSection.classList.remove("active");
@@ -981,6 +1001,8 @@
       canCount.required = false;
 
       dumpsterCount.required = true;
+
+      dumpsterSize.required = true;
 
     }
 
