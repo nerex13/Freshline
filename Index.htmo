@@ -1,0 +1,28 @@
+const BUSINESS_EMAIL = "Freshline.Exteriors@protonmail.com";
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("quoteForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const data = new FormData(event.currentTarget);
+  const name = data.get("name");
+  const phone = data.get("phone");
+  const service = data.get("service");
+  const details = data.get("details");
+
+  const subject = encodeURIComponent(`Freshline quote request - ${service}`);
+  const body = encodeURIComponent(
+`Name: ${name}
+Phone: ${phone}
+Service: ${service}
+
+Job details:
+${details}`
+  );
+
+  document.getElementById("formStatus").textContent =
+    "Opening your email app with the quote request ready to send…";
+
+  window.location.href = `mailto:${BUSINESS_EMAIL}?subject=${subject}&body=${body}`;
+});
