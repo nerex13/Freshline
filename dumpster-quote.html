@@ -1,1 +1,1014 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <title>
+    Garbage Can & Dumpster Cleaning | Freshline Exterior Cleaning
+  </title>
+
+  <meta
+    name="description"
+    content="Request garbage can or dumpster cleaning from Freshline Exterior Cleaning in East Idaho."
+  />
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7f2;
+      color: #111;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 34px));
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #111;
+      color: white;
+    }
+
+    nav {
+      min-height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: inline-flex;
+      flex-direction: column;
+      line-height: 1;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-style: italic;
+    }
+
+    .logo-main {
+      font-size: 30px;
+      letter-spacing: -1px;
+    }
+
+    .logo-main span {
+      color: #67c52f;
+    }
+
+    .logo-sub {
+      margin-top: 7px;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .back-button {
+      padding: 12px 18px;
+      border: 2px solid #67c52f;
+      color: #67c52f;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    /* PAGE */
+
+    .quote-section {
+      min-height: calc(100vh - 86px);
+      padding: 65px 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.90),
+          rgba(0,0,0,.62)
+        ),
+        url("https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=1800&q=90")
+        center/cover no-repeat;
+    }
+
+    .quote-layout {
+      display: grid;
+      grid-template-columns: 1fr 490px;
+      gap: 65px;
+      align-items: center;
+    }
+
+    /* LEFT */
+
+    .quote-copy {
+      color: white;
+    }
+
+    .quote-copy h1 {
+      margin: 0;
+      font-size: clamp(48px, 7vw, 80px);
+      line-height: .92;
+      text-transform: uppercase;
+      letter-spacing: -3px;
+    }
+
+    .quote-copy h1 span {
+      color: #67c52f;
+    }
+
+    .quote-copy p {
+      max-width: 550px;
+      margin: 22px 0;
+      font-size: 18px;
+      color: rgba(255,255,255,.9);
+    }
+
+    .pricing-box {
+      max-width: 470px;
+      margin: 25px 0;
+      padding: 22px;
+      border-left: 5px solid #67c52f;
+      border-radius: 6px;
+      background: rgba(0,0,0,.55);
+    }
+
+    .pricing-box h3 {
+      margin: 0 0 12px;
+      text-transform: uppercase;
+      font-size: 15px;
+    }
+
+    .price-main {
+      font-size: 32px;
+      font-weight: 900;
+      color: #67c52f;
+    }
+
+    .price-extra {
+      margin-top: 5px;
+      font-size: 14px;
+      color: white;
+    }
+
+    .dumpster-note {
+      margin-top: 14px;
+      padding-top: 13px;
+      border-top: 1px solid rgba(255,255,255,.25);
+      font-size: 12px;
+      color: #ddd;
+    }
+
+    .quote-feature {
+      margin: 13px 0;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .quote-feature span {
+      color: #67c52f;
+      margin-right: 8px;
+    }
+
+    /* FORM */
+
+    .quote-card {
+      background: white;
+      border-radius: 10px;
+      padding: 32px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.30);
+    }
+
+    .quote-card h2 {
+      margin: 0;
+      text-align: center;
+      font-size: 30px;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .quote-card h2 span {
+      color: #67c52f;
+    }
+
+    .quote-card > p {
+      margin: 10px 0 24px;
+      text-align: center;
+      color: #666;
+      font-size: 13px;
+    }
+
+    label {
+      display: block;
+      margin: 13px 0 6px;
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: white;
+      font: inherit;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid rgba(103,197,47,.2);
+      border-color: #67c52f;
+    }
+
+    textarea {
+      min-height: 105px;
+      resize: vertical;
+    }
+
+    /* TYPE BUTTONS */
+
+    .cleaning-choice {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .cleaning-option {
+      position: relative;
+    }
+
+    .cleaning-option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .cleaning-option label {
+      min-height: 82px;
+      margin: 0;
+      padding: 13px;
+      border: 2px solid #ddd;
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .cleaning-option label strong {
+      font-size: 12px;
+    }
+
+    .cleaning-option label span {
+      margin-top: 5px;
+      color: #666;
+      font-size: 10px;
+      font-weight: 400;
+      text-transform: none;
+    }
+
+    .cleaning-option input:checked + label {
+      border-color: #67c52f;
+      background: #f3faee;
+      box-shadow: 0 0 0 1px #67c52f;
+    }
+
+    /* CONDITIONAL AREAS */
+
+    .extra-section {
+      display: none;
+      margin-top: 18px;
+      padding: 18px;
+      border: 1px solid #dbe6d5;
+      border-radius: 7px;
+      background: #f8fbf6;
+    }
+
+    .extra-section.active {
+      display: block;
+    }
+
+    /* PRICE PREVIEW */
+
+    .price-preview {
+      margin-top: 16px;
+      padding: 15px;
+      border-radius: 6px;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .price-preview span {
+      display: block;
+      margin-top: 3px;
+      color: #67c52f;
+      font-size: 26px;
+      font-weight: 900;
+    }
+
+    /* UPLOAD */
+
+    .upload-box {
+      padding: 18px;
+      border: 2px dashed #aaa;
+      border-radius: 7px;
+      background: white;
+      text-align: center;
+    }
+
+    .upload-icon {
+      margin-bottom: 7px;
+      font-size: 30px;
+    }
+
+    .upload-box input {
+      border: 0;
+    }
+
+    .upload-help {
+      margin: 9px 0 0;
+      color: #777;
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    /* BUTTON */
+
+    .submit-button {
+      width: 100%;
+      min-height: 54px;
+      margin-top: 18px;
+      border: 0;
+      border-radius: 6px;
+      background: #67c52f;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .submit-button:hover {
+      filter: brightness(.94);
+    }
+
+    .privacy {
+      margin-top: 12px;
+      color: #777;
+      font-size: 10px;
+      text-align: center;
+    }
+
+    .direct-contact {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid #ddd;
+      color: #555;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .direct-contact a {
+      color: #4a9f1d;
+      font-weight: 900;
+    }
+
+    @media (max-width: 850px) {
+
+      .quote-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .quote-copy {
+        text-align: center;
+      }
+
+      .pricing-box {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .quote-card {
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      nav {
+        min-height: 74px;
+      }
+
+      .logo-main {
+        font-size: 23px;
+      }
+
+      .logo-sub {
+        font-size: 9px;
+      }
+
+      .back-button {
+        padding: 10px 12px;
+        font-size: 10px;
+      }
+
+      .quote-section {
+        padding: 45px 0;
+      }
+
+      .quote-copy h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+      }
+
+      .quote-card {
+        padding: 24px 19px;
+      }
+
+      .cleaning-choice {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="container">
+
+    <nav>
+
+      <a
+        class="logo"
+        href="index.html"
+      >
+
+        <div class="logo-main">
+          Fresh<span>line</span>
+        </div>
+
+        <div class="logo-sub">
+          Exterior Cleaning
+        </div>
+
+      </a>
+
+      <a
+        class="back-button"
+        href="index.html"
+      >
+        ← Back To Home
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+<main>
+
+<section class="quote-section">
+
+  <div class="container quote-layout">
+
+    <!-- LEFT SIDE -->
+
+    <div class="quote-copy">
+
+      <h1>
+        Cleaner Cans.<br>
+        <span>Cleaner Property.</span>
+      </h1>
+
+      <p>
+        Residential garbage can cleaning with straightforward pricing,
+        plus custom quotes for larger dumpsters and commercial containers.
+      </p>
+
+      <div class="pricing-box">
+
+        <h3>
+          Residential Garbage Can Cleaning
+        </h3>
+
+        <div class="price-main">
+          $35 First Can
+        </div>
+
+        <div class="price-extra">
+          + $15 for each additional can
+        </div>
+
+        <div class="dumpster-note">
+          Dumpsters and larger commercial containers are individually
+          quoted based on size, condition, quantity, and service needs.
+        </div>
+
+      </div>
+
+      <div class="quote-feature">
+        <span>✓</span>
+        Residential garbage cans
+      </div>
+
+      <div class="quote-feature">
+        <span>✓</span>
+        Commercial dumpsters
+      </div>
+
+      <div class="quote-feature">
+        <span>✓</span>
+        Photo uploads available
+      </div>
+
+      <div class="quote-feature">
+        <span>✓</span>
+        One-time or recurring service requests
+      </div>
+
+    </div>
+
+
+    <!-- FORM -->
+
+    <div class="quote-card">
+
+      <h2>
+        Request <span>Service</span>
+      </h2>
+
+      <p>
+        Tell us what you need cleaned.
+      </p>
+
+      <form
+        action="https://formspree.io/f/xvkpldaz"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Freshline Garbage Can / Dumpster Request"
+        />
+
+
+        <!-- CONTACT -->
+
+        <label for="name">
+          Full Name
+        </label>
+
+        <input
+          id="name"
+          name="Name"
+          type="text"
+          autocomplete="name"
+          placeholder="Your name"
+          required
+        />
+
+
+        <label for="phone">
+          Phone Number
+        </label>
+
+        <input
+          id="phone"
+          name="Phone"
+          type="tel"
+          autocomplete="tel"
+          placeholder="(208) 555-1234"
+          required
+        />
+
+
+        <label for="email">
+          Email Address
+        </label>
+
+        <input
+          id="email"
+          name="Email"
+          type="email"
+          autocomplete="email"
+          placeholder="you@example.com"
+        />
+
+
+        <label for="address">
+          Service Address
+        </label>
+
+        <input
+          id="address"
+          name="Service Address"
+          type="text"
+          placeholder="Street address, city, ZIP"
+          required
+        />
+
+
+        <!-- SERVICE TYPE -->
+
+        <label>
+          What Needs Cleaned?
+        </label>
+
+        <div class="cleaning-choice">
+
+          <div class="cleaning-option">
+
+            <input
+              id="garbageCan"
+              name="Container Type"
+              type="radio"
+              value="Residential Garbage Cans"
+              checked
+            />
+
+            <label for="garbageCan">
+
+              <strong>
+                🗑 Garbage Cans
+              </strong>
+
+              <span>
+                Residential rolling garbage cans
+              </span>
+
+            </label>
+
+          </div>
+
+
+          <div class="cleaning-option">
+
+            <input
+              id="dumpster"
+              name="Container Type"
+              type="radio"
+              value="Dumpster / Commercial Container"
+            />
+
+            <label for="dumpster">
+
+              <strong>
+                ♻ Dumpster
+              </strong>
+
+              <span>
+                Larger or commercial containers
+              </span>
+
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <!-- RESIDENTIAL CANS -->
+
+        <div
+          class="extra-section active"
+          id="canSection"
+        >
+
+          <label for="canCount">
+            Number Of Garbage Cans
+          </label>
+
+          <input
+            id="canCount"
+            name="Number of Garbage Cans"
+            type="number"
+            min="1"
+            value="1"
+          />
+
+          <div class="price-preview">
+
+            Estimated Cleaning Price
+
+            <span id="priceTotal">
+              $35
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- DUMPSTER -->
+
+        <div
+          class="extra-section"
+          id="dumpsterSection"
+        >
+
+          <label for="dumpsterCount">
+            Number Of Dumpsters
+          </label>
+
+          <input
+            id="dumpsterCount"
+            name="Number of Dumpsters"
+            type="number"
+            min="1"
+            placeholder="Example: 2"
+          />
+
+
+          <label for="dumpsterSize">
+            Approximate Dumpster Size
+          </label>
+
+          <select
+            id="dumpsterSize"
+            name="Dumpster Size"
+          >
+
+            <option value="">
+              Select if known
+            </option>
+
+            <option>
+              Small Commercial Dumpster
+            </option>
+
+            <option>
+              2 Yard
+            </option>
+
+            <option>
+              4 Yard
+            </option>
+
+            <option>
+              6 Yard
+            </option>
+
+            <option>
+              8 Yard
+            </option>
+
+            <option>
+              Roll-Off Dumpster
+            </option>
+
+            <option>
+              Not Sure
+            </option>
+
+          </select>
+
+
+          <label for="frequency">
+            Service Frequency
+          </label>
+
+          <select
+            id="frequency"
+            name="Requested Frequency"
+          >
+
+            <option>
+              One-Time Cleaning
+            </option>
+
+            <option>
+              Weekly
+            </option>
+
+            <option>
+              Every Two Weeks
+            </option>
+
+            <option>
+              Monthly
+            </option>
+
+            <option>
+              Recurring - Not Sure Yet
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- PHOTOS -->
+
+        <label for="photos">
+          Photos
+        </label>
+
+        <div class="upload-box">
+
+          <div class="upload-icon">
+            📷
+          </div>
+
+          <input
+            id="photos"
+            name="container_photos"
+            type="file"
+            accept="image/jpeg,image/png,image/webp,image/heic,image/heif"
+            multiple
+          />
+
+          <p class="upload-help">
+            For dumpsters, photos are especially helpful. Include the
+            entire container and any heavy buildup or problem areas.
+          </p>
+
+        </div>
+
+
+        <!-- DETAILS -->
+
+        <label for="details">
+          Additional Details
+        </label>
+
+        <textarea
+          id="details"
+          name="Additional Details"
+          placeholder="Tell us about buildup, odors, grease, location access, recurring service needs, or anything else we should know."
+        ></textarea>
+
+
+        <button
+          class="submit-button"
+          type="submit"
+        >
+          Send Request →
+        </button>
+
+      </form>
+
+
+      <div class="privacy">
+        🔒 Your information and photos are only used to respond to your service request.
+      </div>
+
+
+      <div class="direct-contact">
+
+        Prefer to call or text?<br><br>
+
+        <a href="tel:2082704041">
+          ☎ (208) 270-4041
+        </a>
+
+        &nbsp; | &nbsp;
+
+        <a href="sms:2082704041">
+          Send a Text
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<script>
+
+  const garbageCan =
+    document.getElementById("garbageCan");
+
+  const dumpster =
+    document.getElementById("dumpster");
+
+  const canSection =
+    document.getElementById("canSection");
+
+  const dumpsterSection =
+    document.getElementById("dumpsterSection");
+
+  const canCount =
+    document.getElementById("canCount");
+
+  const dumpsterCount =
+    document.getElementById("dumpsterCount");
+
+  const priceTotal =
+    document.getElementById("priceTotal");
+
+
+  /*
+    Residential pricing:
+    $35 first can
+    $15 each additional can
+  */
+
+  function updatePrice() {
+
+    let count =
+      parseInt(canCount.value) || 1;
+
+    if (count < 1) {
+      count = 1;
+    }
+
+    const total =
+      35 + ((count - 1) * 15);
+
+    priceTotal.textContent =
+      "$" + total;
+
+  }
+
+
+  function updateContainerType() {
+
+    if (garbageCan.checked) {
+
+      canSection.classList.add("active");
+
+      dumpsterSection.classList.remove("active");
+
+      canCount.required = true;
+
+      dumpsterCount.required = false;
+
+    } else {
+
+      canSection.classList.remove("active");
+
+      dumpsterSection.classList.add("active");
+
+      canCount.required = false;
+
+      dumpsterCount.required = true;
+
+    }
+
+  }
+
+
+  garbageCan.addEventListener(
+    "change",
+    updateContainerType
+  );
+
+  dumpster.addEventListener(
+    "change",
+    updateContainerType
+  );
+
+  canCount.addEventListener(
+    "input",
+    updatePrice
+  );
+
+
+  updateContainerType();
+
+  updatePrice();
+
+</script>
+
+</body>
+
+</html>
